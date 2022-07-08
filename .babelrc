@@ -1,0 +1,10 @@
+{
+  "presets": ["env", "stage-3"],
+  "plugins": [
+    "dynamic-import-node",
+    "transform-class-properties",
+    "transform-es5-property-mutators",
+    "transform-object-rest-spread",
+    "transform-runtime"
+  ]
+}

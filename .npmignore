@@ -1,0 +1,6 @@
+.*
+build/
+examples/
+node_modules/
+
+

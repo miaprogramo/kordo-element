@@ -1,0 +1,64 @@
+@notice-bar-prefix-cls: ~"@{css-prefix}notice-bar";
+@notice-bar-vertical-prefix-cls: ~"@{css-prefix}notice-bar-vertical";
+@notice-bar-horizontal-prefix-cls: ~"@{css-prefix}notice-bar-horizontal";
+@notice-bar-animation: ~"@{css-prefix}notice-bar-animation";
+
+.@{notice-bar-prefix-cls} {
+  display: flex;
+  align-items: center;
+  color: @primary-color;
+  background-color: @notice-bar-bg;
+  &-wrap {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+  &_left-icon {
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &_right-icon {
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.@{notice-bar-vertical-prefix-cls} {
+  width: 100%;
+  overflow: hidden;
+}
+
+.@{notice-bar-horizontal-prefix-cls} {
+  align-items: center;
+  &-content {
+    position: absolute;
+    white-space: nowrap;
+    &.@{notice-bar-prefix-cls} {
+      &_scrollable {
+        padding-left: 100%;
+        display: inline-block;
+        animation: @notice-bar-animation linear 0s infinite both;
+      }
+    }
+  }
+}
+
+@keyframes @notice-bar-animation {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

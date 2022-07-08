@@ -1,0 +1,35 @@
+@grid-prefix-cls: ~"@{css-prefix}grid";
+@grid-item-prefix-cls: ~"@{css-prefix}grid-item";
+@grid-border: 1px solid @border-color-base;
+
+.@{grid-prefix-cls} {
+  display: grid;
+  box-sizing: border-box;
+  &-item {
+    display: inline-grid;
+    box-sizing: border-box;
+  }
+  &_center {
+    .@{grid-item-prefix-cls} {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &_border {
+    &.@{grid-prefix-cls} {
+      border-top: @grid-border;
+      border-left: @grid-border;
+    }
+    .@{grid-item-prefix-cls} {
+      border-right: @grid-border;
+      border-bottom: @grid-border;
+    }
+  }
+  &_hover {
+    .@{grid-item-prefix-cls} {
+      &:hover {
+        box-shadow: @shadow-light;
+      }
+    }
+  }
+}
