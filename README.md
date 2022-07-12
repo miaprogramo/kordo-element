@@ -2,4 +2,4 @@
 
 一款 Element UI 风格的桌面端组件库，可以配合 Element UI 使用。
 
-[中文文档](https://kordo-dev.github.io/kordo-dev)
+[中文文档](https://miaprogramo.github.io/kordo-element)

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "title": "kordo-element",
   "description": "一款 Element UI 风格的桌面端组件库，可以配合 Element UI 使用。",
-  "homepage": "https://kordo-dev.github.io/kordo-dev",
+  "homepage": "https://miaprogramo.github.io/kordo-element",
   "keywords": [
     "element",
     "kordo",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kordo-dev/kordo-element"
+    "url": "https://github.com/miaprogramo/kordo-element"
   },
   "author": "KK",
   "license": "MIT",
