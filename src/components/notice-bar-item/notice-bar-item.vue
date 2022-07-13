@@ -1,5 +1,5 @@
 <template>
-  <div :class="[prefixCls]" :style="style" @click="handleClick">
+  <div :class="[prefixCls]" :style="styles" @click="handleClick">
     <slot></slot>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
     };
   },
   computed: {
-    style() {
+    styles() {
       const height = this.$parent.$parent.height + "px";
       return {
         height,

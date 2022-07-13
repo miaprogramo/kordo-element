@@ -1,5 +1,9 @@
 <template>
-  <div ref="vertical" :class="[prefixCls + '-vertical-content']" :style="style">
+  <div
+    ref="vertical"
+    :class="[prefixCls + '-vertical-content']"
+    :style="styles"
+  >
     <slot></slot>
   </div>
 </template>
@@ -31,7 +35,7 @@ export default {
     interval() {
       return this.$parent.interval;
     },
-    style() {
+    styles() {
       return {
         transform: `translate3d(0,${this.currenTranslateY}px,0)`,
         transition: `transform ${this.noAnimate ? 0 : this.duration}ms`,

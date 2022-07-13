@@ -1,11 +1,11 @@
 <template>
-  <div v-if="isShow" :class="[prefixCls]" :style="style">
+  <div v-if="isShow" :class="[prefixCls]" :style="styles">
     <div :class="[prefixCls + '_left-icon']">
       <slot name="left-icon">
         <Icon name="volume-notice" />
       </slot>
     </div>
-    <div :class="contentClasses" :style="{ height: style.height }">
+    <div :class="contentClasses" :style="{ height: styles.height }">
       <notice-bar-vertical v-if="vertical">
         <slot></slot>
       </notice-bar-vertical>
@@ -97,7 +97,7 @@ export default {
     };
   },
   computed: {
-    style() {
+    styles() {
       return {
         width: this.width ? this.width + "px" : "auto",
         height: this.height + "px",
@@ -113,12 +113,6 @@ export default {
           [prefixCls + "-horizontal"]: !this.vertical,
         },
       ];
-    },
-    contentStyle() {
-      return {
-        height:
-          typeof this.height === "string" ? this.height : this.height + "px",
-      };
     },
   },
   methods: {

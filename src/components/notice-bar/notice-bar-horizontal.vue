@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes" :style="style" @click="handleClick">
+  <div :class="classes" :style="styles" @click="handleClick">
     <slot></slot>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       prefixCls,
-      style: {},
+      styles: {},
       overflow: false,
     };
   },
@@ -60,7 +60,7 @@ export default {
     },
     start(width) {
       const duration = width / this.speed;
-      this.style = {
+      this.styles = {
         "animation-duration": duration + "s",
       };
     },
