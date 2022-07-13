@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes" :style="style" ref="grid">
+  <div :class="classes" :style="styles" ref="grid">
     <slot></slot>
   </div>
 </template>
@@ -62,27 +62,22 @@ export default {
         },
       ];
     },
-    style() {
-      let style = {
+    styles() {
+      let styles = {
         "grid-template-columns": `repeat(${this.col}, 1fr)`,
       };
-      // if (typeof this.gutter === "number") {
-      //   style["grid-gap"] = this.gutter + "px " + this.gutter + "px";
-      // } else {
-      //   style["grid-gap"] = this.gutter + " " + this.gutter;
-      // }
-      return style;
+      return styles;
     },
-    itemStyle() {
-      let itemStyle = {
+    itemStyles() {
+      let itemStyles = {
         height: this.itemHeight,
       };
       if (typeof this.padding === "number") {
-        itemStyle["padding"] = this.padding + "px";
+        itemStyles["padding"] = this.padding + "px";
       } else {
-        itemStyle["padding"] = this.padding;
+        itemStyles["padding"] = this.padding;
       }
-      return itemStyle;
+      return itemStyles;
     },
   },
   mounted() {

@@ -1,5 +1,5 @@
 <template>
-  <div :class="[prefixCls]" :style="this.$parent.itemStyle">
+  <div :class="[prefixCls]" :style="this.$parent.itemStyles">
     <slot></slot>
   </div>
 </template>
