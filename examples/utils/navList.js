@@ -31,6 +31,11 @@ export const components = [
         name: "Ellipsis",
         title: "Ellipsis 文本省略",
       },
+      {
+        path: "/components/space",
+        name: "Space",
+        title: "Space 间距",
+      },
     ],
   },
   {

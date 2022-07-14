@@ -1,0 +1,13 @@
+@space-prefix-cls: ~"@{css-prefix}space";
+@space-item-prefix-cls: ~"@{css-prefix}space-item";
+
+.@{space-prefix-cls} {
+  display: flex;
+  &-vertical {
+    flex-direction: column;
+  }
+  &-spacer {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -10,6 +10,7 @@ export { default as Ellipsis } from "./components/ellipsis.md";
 export { default as Grid } from "./components/grid.md";
 export { default as NoticeBar } from "./components/notice-bar.md";
 export { default as Numeral } from "./components/numeral.md";
+export { default as Space } from "./components/space.md";
 export { default as Time } from "./components/time.md";
 /** methods */
 export { default as Copy } from "./methods/copy.md";

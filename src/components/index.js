@@ -8,5 +8,6 @@ export { default as Icon } from "./icon";
 export { default as NoticeBar } from "./notice-bar";
 export { default as NoticeBarItem } from "./notice-bar-item";
 export { default as Numeral } from "./numeral";
+export { default as Space } from "./space";
 export { default as Time } from "./time";
 export { default as Tooltip } from "./tooltip";
