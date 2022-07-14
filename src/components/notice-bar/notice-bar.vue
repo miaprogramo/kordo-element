@@ -24,7 +24,6 @@
 import Icon from "../icon/icon";
 import NoticeBarVertical from "./notice-bar-vertical";
 import NoticeBarHorizontal from "./notice-bar-horizontal";
-import "./assets/base.less";
 import config from "../../config";
 const prefixCls = config.prefix + "notice-bar";
 
