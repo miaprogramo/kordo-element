@@ -1,15 +1,14 @@
 {
   "name": "kordo-element",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "title": "kordo-element",
   "description": "一款 Element UI 风格的桌面端组件库，可以配合 Element UI 使用。",
   "homepage": "https://miaprogramo.github.io/kordo-element",
   "keywords": [
-    "element",
     "kordo",
+    "element",
     "kordo-element",
     "vue",
-    "vue.js",
     "component",
     "components",
     "ui"
