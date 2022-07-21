@@ -32,6 +32,11 @@ export default {
     font-size: 22px;
     font-weight: 400;
   }
+  h4 {
+    color: #1f2f3d;
+    font-size: 16px;
+    font-weight: 400;
+  }
   code {
     padding: 1px 5px;
     background-color: @code-color;
