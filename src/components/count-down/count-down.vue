@@ -35,38 +35,54 @@ export default {
     return {
       prefixCls,
       lastTime: "",
+      countDownStartTime: "",
+      count: 0,
     };
   },
   methods: {
     initTime() {
       let lastTime = 0;
-      let targetTime = 0;
       try {
         if (Object.prototype.toString.call(this.target) === "[object Date]") {
-          targetTime = this.target.getTime();
+          let targetTime = this.target.getTime();
+          lastTime = targetTime - new Date().getTime();
         } else {
-          targetTime = new Date(this.target).getTime();
+          lastTime = this.target;
         }
       } catch (e) {
         throw new Error("invalid target prop", e);
       }
 
-      lastTime = targetTime - new Date().getTime();
       return lastTime < 0 ? 0 : lastTime;
     },
     tick() {
-      let { lastTime } = this;
+      this.count = 0;
+      this.countDownStartTime = new Date().getTime();
+      if (this.lastTime >= 0) {
+        this.timer = setTimeout(this.countDown, this.interval);
+      }
+    },
+    countDown() {
+      this.count++;
 
-      this.timer = setTimeout(() => {
-        if (lastTime < this.interval) {
-          clearTimeout(this.timer);
-          this.onEnd(); // 结束
-        } else {
-          lastTime -= this.interval;
-          this.lastTime = lastTime;
-          this.tick();
-        }
-      }, this.interval);
+      const offset =
+        new Date().getTime() -
+        (this.countDownStartTime + this.count * this.interval);
+
+      let nextInterval = this.interval - offset;
+      if (nextInterval < 0) {
+        nextInterval = 0;
+      }
+
+      const lastTime = this.lastTime - this.interval;
+      this.lastTime = lastTime < 0 ? 0 : lastTime;
+
+      if (this.lastTime <= 0) {
+        this.timer && clearTimeout(this.timer);
+        this.onEnd(); // 倒计时结束
+      } else {
+        this.timer = setTimeout(this.countDown, nextInterval);
+      }
     },
     defaultFormat(time) {
       const hours = 60 * 60 * 1000;
@@ -78,16 +94,25 @@ export default {
 
       return `${fixedZero(h)}:${fixedZero(m)}:${fixedZero(s)}`;
     },
+    lastTimeFormat(time) {
+      time = time / 1000;
+      const days = Math.floor(time / 86400);
+      const hours = Math.floor((time % 86400) / 3600);
+      const minutes = Math.floor(((time % 86400) % 3600) / 60);
+      const seconds = Math.floor(((time % 86400) % 3600) % 60);
+
+      return { days, hours, minutes, seconds };
+    },
   },
   computed: {
     result() {
       const { format = this.defaultFormat } = this;
-      return format(this.lastTime);
+      return format(this.lastTime, this.lastTimeFormat(this.lastTime));
     },
   },
   watch: {
     target() {
-      if (this.timer) clearTimeout(this.timer);
+      this.timer && clearTimeout(this.timer);
       this.lastTime = this.initTime();
       this.tick();
     },
@@ -99,7 +124,7 @@ export default {
     this.tick();
   },
   beforeDestroy() {
-    if (this.timer) clearTimeout(this.timer);
+    this.timer && clearTimeout(this.timer);
   },
 };
 </script>
