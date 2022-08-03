@@ -174,10 +174,4 @@ export default {
     }
   }
 }
-/deep/.el-scrollbar__bar.is-vertical {
-  opacity: 1;
-}
-/deep/.el-scrollbar__wrap {
-  overflow-x: hidden;
-}
 </style>

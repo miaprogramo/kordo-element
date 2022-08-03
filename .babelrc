@@ -5,6 +5,13 @@
     "transform-class-properties",
     "transform-es5-property-mutators",
     "transform-object-rest-spread",
-    "transform-runtime"
+    "transform-runtime",
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ]
   ]
 }

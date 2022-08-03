@@ -11,7 +11,6 @@
         <Demo v-if="source" :source="source" />
       </div>
     </div>
-    <el-backtop target="html"></el-backtop>
   </div>
 </template>
 <script>

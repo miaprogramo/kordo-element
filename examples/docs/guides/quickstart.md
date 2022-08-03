@@ -58,7 +58,6 @@ import Vue from "vue";
 import App from "./App.vue";
 
 import { Grid, GridItem } from "kordo-element";
-
 Vue.use(Grid).use(GridItem);
 
 new Vue({
