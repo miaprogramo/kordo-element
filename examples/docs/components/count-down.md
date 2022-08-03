@@ -12,10 +12,10 @@
 <template>
   <el-row>
     <el-col :span="12">
-      <k-count-down :target="targetTime1" v-font="24" />
+      <k-count-down :target="targetTime" v-font="24" />
     </el-col>
     <el-col :span="12">
-      <k-count-down :target="targetTime2" :on-end="handleEnd" v-font="24" />
+      <k-count-down :target="targetTime" :on-end="handleEnd" v-font="24" />
     </el-col>
   </el-row>
 </template>
@@ -23,8 +23,7 @@
   export default {
     data() {
       return {
-        targetTime1: new Date(new Date().getTime() + 2 * 60 * 60 * 1000),
-        targetTime2: 10 * 1000,
+        targetTime: new Date(new Date().getTime() + 15 * 1000),
       };
     },
     methods: {
@@ -48,7 +47,7 @@
   export default {
     data() {
       return {
-        targetTime: new Date(new Date().getTime() + 26 * 60 * 60 * 1000 + 90 * 1000),
+        targetTime: 48 * 60 * 60 * 1000,
       };
     },
     methods: {

@@ -43,7 +43,11 @@ export default {
     initTime() {
       let lastTime = 0;
       try {
-        if (Object.prototype.toString.call(this.target) === "[object Date]") {
+        if (!this.target) {
+          lastTime = 0;
+        } else if (
+          Object.prototype.toString.call(this.target) === "[object Date]"
+        ) {
           let targetTime = this.target.getTime();
           lastTime = targetTime - new Date().getTime();
         } else {
