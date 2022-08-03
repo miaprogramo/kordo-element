@@ -13,7 +13,7 @@ import Vue from "vue";
 import App from "./App.vue";
 
 import KordoElement from "kordo-element";
-import "kordo-element/dist/kordo-element.css";
+import "kordo-element/lib/kordo-element.css";
 
 Vue.use(KordoElement);
 
