@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const webpackBaseConfig = require("./webpack.base.config.js");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = merge(webpackBaseConfig, {
@@ -26,6 +27,7 @@ module.exports = merge(webpackBaseConfig, {
     },
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": '"production"',
     }),
