@@ -13,7 +13,7 @@ let plugins = [
   }),
   new HtmlWebpackPlugin({
     inject: true,
-    filename: path.join(__dirname, "../examples/dist/index.html"),
+    filename: path.join(__dirname, "../docs/index.html"),
     template: path.join(__dirname, "../examples/index.html"),
   }),
   new FriendlyErrorsPlugin(),
@@ -33,7 +33,7 @@ module.exports = merge(webpackBaseConfig, {
   },
   // 输出
   output: {
-    path: path.join(__dirname, "../examples/dist"),
+    path: path.join(__dirname, "../docs"),
     publicPath: "",
     filename: "[name].js",
     chunkFilename: "[name].chunk.js",
@@ -41,7 +41,6 @@ module.exports = merge(webpackBaseConfig, {
   resolve: {
     alias: {
       vue: "vue/dist/vue.esm.js",
-      dist: path.resolve(__dirname, "../dist"),
       "kordo-element": path.resolve(__dirname, "../src"),
     },
   },
