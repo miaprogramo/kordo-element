@@ -12,7 +12,7 @@ export default {
       el.style["-webkit-line-clamp"] = binding.value;
     }
   },
-  updated(el, binding) {
+  update(el, binding) {
     if (binding.value) {
       el.style["-webkit-line-clamp"] = binding.value;
     }

@@ -9,7 +9,7 @@ export default {
         el.style.display = binding.value;
       }
     },
-    updated(el, binding) {
+    update(el, binding) {
       if (binding.value) {
         el.style.display = binding.value;
       }
@@ -24,7 +24,7 @@ export default {
         el.style.width = binding.value + unit(binding.value);
       }
     },
-    updated(el, binding) {
+    update(el, binding) {
       if (binding.value) {
         el.style.width = binding.value + unit(binding.value);
       }
@@ -39,7 +39,7 @@ export default {
         el.style.height = binding.value + unit(binding.value);
       }
     },
-    updated(el, binding) {
+    update(el, binding) {
       if (binding.value) {
         el.style.height = binding.value + unit(binding.value);
       }
@@ -54,7 +54,7 @@ export default {
         el.style.margin = binding.value + unit(binding.value);
       }
     },
-    updated(el, binding) {
+    update(el, binding) {
       if (binding.value) {
         el.style.margin = binding.value + unit(binding.value);
       }
@@ -69,7 +69,7 @@ export default {
         el.style.padding = binding.value + unit(binding.value);
       }
     },
-    updated(el, binding) {
+    update(el, binding) {
       if (binding.value) {
         el.style.padding = binding.value + unit(binding.value);
       }
@@ -84,7 +84,7 @@ export default {
         el.style.fontSize = `${binding.value}px`;
       }
     },
-    updated(el, binding) {
+    update(el, binding) {
       if (binding && binding.value) {
         el.style.fontSize = `${binding.value}px`;
       }
@@ -94,17 +94,12 @@ export default {
     },
   },
   color: {
-    inserted(el, binding) {
-      if (binding.value) {
-        el.style.color = binding.value;
-      }
-    },
     bind(el, binding) {
       if (binding.value) {
         el.style.color = binding.value;
       }
     },
-    updated(el, binding) {
+    update(el, binding) {
       if (binding.value) {
         el.style.color = binding.value;
       }
@@ -119,7 +114,7 @@ export default {
         el.style.backgroundColor = binding.value;
       }
     },
-    updated(el, binding) {
+    update(el, binding) {
       if (binding.value) {
         el.style.backgroundColor = binding.value;
       }
