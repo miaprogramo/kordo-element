@@ -25,22 +25,29 @@ new Vue({
 
 #### 按需引用
 
-借助 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)我们可以只引入需要的组件，以达到减小项目体积的目的。
+借助 [babel-plugin-component](https://github.com/ElementUI/babel-plugin-component)我们可以只引入需要的组件，以达到减小项目体积的目的。
 
-首先，安装 babel-plugin-import：
+首先，安装 babel-plugin-component：
 
 ```javascript
-npm install babel-plugin-import --save-dev
+npm install babel-plugin-component --save-dev
 ```
 
 然后，将 .babelrc 修改为：
 
 ```javascript
 {
-  "plugins": [["import", {
-    "libraryName": "kordo-element",
-    "libraryDirectory": "src/components"
-  },'kordo-element']]
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "kordo-element",
+        "libraryDirectory": "src/components",
+        "styleLibraryDirectory": "src/styles"
+      },
+      "kordo-element"
+    ]
+  ]
 }
 ```
 
@@ -51,9 +58,8 @@ import Vue from "vue";
 import App from "./App.vue";
 
 import { Grid, GridItem } from "kordo-element";
-import "kordo-element/dist/kordo-element.css";
-Vue.component(Grid.name, Grid);
-Vue.component(GridItem.name, GridItem);
+
+Vue.use(Grid).use(GridItem);
 
 new Vue({
   el: "#app",
