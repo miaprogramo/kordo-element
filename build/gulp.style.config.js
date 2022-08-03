@@ -5,7 +5,7 @@ const rename = require("gulp-rename");
 const autoprefixer = require("gulp-autoprefixer");
 
 // 编译less
-task("default", function () {
+task("default", function() {
   return src("../src/styles/index.less")
     .pipe(less())
     .pipe(
@@ -15,5 +15,5 @@ task("default", function () {
     )
     .pipe(cleanCSS())
     .pipe(rename("kordo-element.css"))
-    .pipe(dest("../dist"));
+    .pipe(dest("../lib"));
 });

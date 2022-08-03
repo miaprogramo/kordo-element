@@ -13,7 +13,7 @@ let plugins = [
   }),
   new HtmlWebpackPlugin({
     inject: true,
-    filename: path.join(__dirname, "../docs/index.html"),
+    filename: path.join(__dirname, "../examples/dist/index.html"),
     template: path.join(__dirname, "../examples/index.html"),
   }),
   new FriendlyErrorsPlugin(),
@@ -33,7 +33,7 @@ module.exports = merge(webpackBaseConfig, {
   },
   // 输出
   output: {
-    path: path.join(__dirname, "../docs"),
+    path: path.join(__dirname, "../examples/dist"),
     publicPath: "",
     filename: "[name].js",
     chunkFilename: "[name].chunk.js",

@@ -11,8 +11,8 @@ module.exports = merge(webpackBaseConfig, {
     main: "./src/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "../dist"),
-    publicPath: "/dist/",
+    path: path.resolve(__dirname, "../lib"),
+    publicPath: "/lib/",
     filename: "kordo-element.js",
     library: "kordo-element",
     libraryTarget: "umd",

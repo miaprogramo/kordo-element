@@ -13,7 +13,7 @@
     "components",
     "ui"
   ],
-  "main": "dist/kordo-element.js",
+  "main": "lib/kordo-element.js",
   "scripts": {
     "dev": "webpack-dev-server  --config build/webpack.dev.config.js",
     "demo": "cross-env NODE_ENV=production webpack --config build/webpack.dev.config.js",
