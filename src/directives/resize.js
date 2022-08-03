@@ -10,7 +10,7 @@ export default {
     el.__observer__ = elementResizeDetectorMaker();
     el.__observer__.listenTo(el, resizeHandler);
   },
-  update() {},
+  componentUpdated() {},
   unbind(el, binding) {
     el.__observer__.removeListener(el, el.__resizeHandler__);
     delete el.__resizeHandler__;
