@@ -1,6 +1,7 @@
 .*
-build/
-examples/
 node_modules/
+build/
+docs/
+examples/
 
 
