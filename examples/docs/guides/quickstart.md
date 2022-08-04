@@ -25,12 +25,12 @@ new Vue({
 
 #### 按需引用
 
-借助 [babel-plugin-component](https://github.com/ElementUI/babel-plugin-component)我们可以只引入需要的组件，以达到减小项目体积的目的。
+借助 [babel-plugin-import](https://github.com/umijs/babel-plugin-import)我们可以只引入需要的组件，以达到减小项目体积的目的。
 
-首先，安装 babel-plugin-component：
+首先，安装 babel-plugin-import：
 
 ```javascript
-npm install babel-plugin-component --save-dev
+npm install babel-plugin-import --save-dev
 ```
 
 然后，将 .babelrc 修改为：
@@ -39,11 +39,11 @@ npm install babel-plugin-component --save-dev
 {
   "plugins": [
     [
-      "component",
+      "import",
       {
         "libraryName": "kordo-element",
         "libraryDirectory": "src/components",
-        "styleLibraryDirectory": "src/styles"
+        customStyleName: (name) => `kordo-element/src/styles/${name}.less`,
       },
       "kordo-element"
     ]
