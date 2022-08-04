@@ -5,8 +5,6 @@ export default {
     el._observe = new IntersectionObserver(callback, options);
     el._observe.observe(el);
   },
-  bind(el, binding) {},
-  componentUpdated(el, binding) {},
   unbind(el) {
     el._observe.unobserve(el);
   },
