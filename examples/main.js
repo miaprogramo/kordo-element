@@ -21,7 +21,8 @@ import {
   inputNumber,
   Switch,
   Slider,
-  tooltip,
+  Tooltip,
+  Card,
 } from "element-ui";
 Vue.use(Row)
   .use(Col)
@@ -31,7 +32,8 @@ Vue.use(Row)
   .use(inputNumber)
   .use(Switch)
   .use(Slider)
-  .use(tooltip);
+  .use(Tooltip)
+  .use(Card);
 
 import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
 Vue.component(CollapseTransition.name, CollapseTransition);

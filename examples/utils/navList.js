@@ -105,13 +105,18 @@ export const directives = [
     title: "v-style 样式",
   },
   {
+    path: "/directives/line-clamp",
+    name: "LineClamp",
+    title: "v-line-clamp 文本按行省略",
+  },
+  {
     path: "/directives/resize",
     name: "Resize",
     title: "v-resize 宽度变化",
   },
   {
-    path: "/directives/line-clamp",
-    name: "LineClamp",
-    title: "v-line-clamp 文本按行省略",
+    path: "/directives/intersect",
+    name: "Intersect",
+    title: "v-intersect 元素曝光",
   },
 ];

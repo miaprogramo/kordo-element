@@ -15,8 +15,9 @@ export { default as Time } from "./components/time.md";
 /** methods */
 export { default as Copy } from "./methods/copy.md";
 export { default as Date } from "./methods/date.md";
-export { default as Resize } from "./directives/resize.md";
 export { default as ScrollTo } from "./methods/scroll-to.md";
 /** directives */
+export { default as Intersect } from "./directives/intersect.md";
 export { default as LineClamp } from "./directives/line-clamp.md";
+export { default as Resize } from "./directives/resize.md";
 export { default as Style } from "./directives/style.md";
