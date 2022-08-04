@@ -65,3 +65,25 @@ new Vue({
   render: (h) => h(App),
 });
 ```
+
+如果你只希望引入部分方法或者指令，比如 `$Copy` 、 `v-style` 、 `v-line-clamp`，那么需要在 main.js 中写入以下内容：
+
+```javascript
+import Vue from "vue";
+import App from "./App.vue";
+
+import Copy from "kordo-element/src/methods/copy";
+import Style from "kordo-element/src/directives/style";
+import LineClamp from "kordo-element/src/directives/line-clamp";
+
+Vue.prototype.$Copy = Copy;
+Object.keys(Style).forEach((key) => {
+  Vue.directive(key, Style[key]);
+});
+Vue.directive("LineClamp", LineClamp);
+
+new Vue({
+  el: "#app",
+  render: (h) => h(App),
+});
+```
