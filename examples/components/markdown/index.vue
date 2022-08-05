@@ -42,10 +42,11 @@ export default {
     background-color: @code-color;
     border-radius: 3px;
   }
-  p {
+  p,
+  ul li {
     color: #5e6d82;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.7;
   }
   pre {
     code {
