@@ -4,8 +4,6 @@
   </div>
 </template>
 <script>
-import elementResizeDetectorMaker from "element-resize-detector";
-import throttle from "lodash.throttle";
 import config from "../../config";
 const prefixCls = config.prefix + "grid";
 
@@ -47,8 +45,6 @@ export default {
     return {
       prefixCls,
       itemHeight: "auto",
-      observer: null,
-      handleResize: () => {},
     };
   },
   computed: {
@@ -56,6 +52,7 @@ export default {
       return [
         prefixCls,
         {
+          [prefixCls + "_square"]: this.square,
           [prefixCls + "_center"]: this.center,
           [prefixCls + "_border"]: this.border,
           [prefixCls + "_hover"]: this.hover,
@@ -78,23 +75,6 @@ export default {
         itemStyles["padding"] = this.padding;
       }
       return itemStyles;
-    },
-  },
-  mounted() {
-    if (this.square) {
-      this.handleResize = throttle(this.onResize, 150, { leading: false });
-      this.observer = elementResizeDetectorMaker();
-      this.observer.listenTo(this.$refs.grid, this.handleResize);
-    }
-  },
-  beforeDestroy() {
-    if (this.observer) {
-      this.observer.removeListener(this.$refs.grid, this.handleResize);
-    }
-  },
-  methods: {
-    onResize() {
-      this.itemHeight = this.$children[0].$el.offsetWidth + "px";
     },
   },
 };

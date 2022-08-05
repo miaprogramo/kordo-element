@@ -7,6 +7,11 @@
 .@{grid-prefix-cls} {
   display: grid;
   box-sizing: border-box;
+  &_square {
+    .@{grid-item-prefix-cls} {
+      aspect-ratio: 1;
+    }
+  }
   &_center {
     .@{grid-item-prefix-cls} {
       align-items: center;
@@ -28,11 +33,6 @@
       &:hover {
         box-shadow: @shadow-light;
       }
-    }
-  }
-  &_square {
-    .@{grid-item-prefix-cls} {
-      aspect-ratio: 1;
     }
   }
 }
