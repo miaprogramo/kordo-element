@@ -110,9 +110,14 @@ export const directives = [
     title: "v-line-clamp 文本按行省略",
   },
   {
+    path: "/directives/click-outside",
+    name: "ClickOutside",
+    title: "v-click-outside 元素外部点击",
+  },
+  {
     path: "/directives/resize",
     name: "Resize",
-    title: "v-resize 宽度变化",
+    title: "v-resize 监听尺寸变化",
   },
   {
     path: "/directives/intersect",

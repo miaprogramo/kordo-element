@@ -1,4 +1,4 @@
-## 监听元素曝光：v-intersect
+## 监听元素曝光指令：v-intersect
 
 `v-intersect` 指令使用 [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)。 它提供了一个易于使用的接口，用于检测元素在用户视图中是否可见。
 

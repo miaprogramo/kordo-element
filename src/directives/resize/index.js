@@ -11,7 +11,7 @@ export default {
     el.__observer.listenTo(el, resizeHandler);
   },
   unbind(el) {
-    el.__observer__.removeListener(el, el.__resizeHandler);
+    el.__observer.removeListener(el, el.__resizeHandler);
     delete el.__resizeHandler;
     delete el.__observer;
   },

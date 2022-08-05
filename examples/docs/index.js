@@ -17,6 +17,7 @@ export { default as Copy } from "./methods/copy.md";
 export { default as Date } from "./methods/date.md";
 export { default as ScrollTo } from "./methods/scroll-to.md";
 /** directives */
+export { default as ClickOutside } from "./directives/click-outside.md";
 export { default as Intersect } from "./directives/intersect.md";
 export { default as LineClamp } from "./directives/line-clamp.md";
 export { default as Resize } from "./directives/resize.md";

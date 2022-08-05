@@ -1,8 +1,8 @@
 /**
  * 限制文本最多显示几行，以...结束，仅适用于 webkit 内核浏览器
  * */
-import { addClass, removeClass } from "../utils/assist.js";
-import config from "../config";
+import { addClass, removeClass } from "../../utils/assist.js";
+import config from "../../config";
 const prefixCls = config.prefix + "line-clamp";
 
 export default {
