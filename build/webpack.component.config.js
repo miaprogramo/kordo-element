@@ -10,7 +10,7 @@ module.exports = merge(webpackBaseConfig, {
   output: {
     path: path.resolve(__dirname, "../lib"),
     publicPath: "/lib/",
-    filename: "[name].js",
+    filename: "[name]/index.js",
     chunkFilename: "[id].js",
     libraryTarget: "umd",
     umdNamedDefine: true,

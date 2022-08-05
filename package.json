@@ -17,9 +17,10 @@
   "scripts": {
     "dev": "webpack-dev-server  --config build/webpack.dev.config.js",
     "demo": "cross-env NODE_ENV=production webpack --config build/webpack.dev.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js",
+    "build:component": "cross-env NODE_ENV=production webpack --config build/webpack.component.config.js",
     "build:style": "gulp --gulpfile build/gulp.style.config.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js ",
-    "build": "npm run build:prod && npm run build:style"
+    "build": "npm run build:prod && npm run build:component && npm run build:style"
   },
   "repository": {
     "type": "git",
