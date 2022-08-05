@@ -39,13 +39,11 @@ npm install babel-plugin-import --save-dev
 {
   "plugins": [
     [
-      "import",
+      "component",
       {
         "libraryName": "kordo-element",
-        "libraryDirectory": "src/components",
-        customStyleName: (name) => `kordo-element/src/styles/${name}.less`,
+        "style": true
       },
-      "kordo-element"
     ]
   ]
 }
