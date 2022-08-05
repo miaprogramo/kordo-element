@@ -7,12 +7,15 @@
 ### 基础用法
 
 宫格共包含两个组件：`Grid` 和 `GridItem`。
+
 设置 Grid 属性 `col` 可以指定最大支持的列数。
+
+宫格每行高度相同。
 
 ```html
 <template>
   <k-grid :col="4" :gutter="10">
-    <k-grid-item>1<div>每行等高</div></k-grid-item>
+    <k-grid-item>1</k-grid-item>
     <k-grid-item>2</k-grid-item>
     <k-grid-item>3</k-grid-item>
     <k-grid-item>4</k-grid-item>
@@ -27,7 +30,6 @@
 ### 宽高一致
 
 设置属性 `square` 为 `true`，宫格的高度会与宽度一致，并会自动适应窗口的改变。
-调整窗口宽度的改变使用了节流函数。
 
 ```html
 <template>

@@ -39,7 +39,7 @@
 ```html
 <template>
   <div>
-    <k-ellipsis :text="text" :height="100" tooltip transfer />
+    <k-ellipsis :text="text" :height="80" tooltip transfer />
   </div>
 </template>
 <script>
@@ -57,6 +57,7 @@
 ### 按照行数省略
 
 设置属性 `lines` 可以指定最大行数，超出这个行数的文本会自动截取。
+
 另一种按照行数省略的方法是使用自定义指令 `v-line-clamp`，它是 CSS 级别的处理，具有更高的性能，但只适用于 Webkit 内核浏览器，详见指令一栏。
 
 ```html

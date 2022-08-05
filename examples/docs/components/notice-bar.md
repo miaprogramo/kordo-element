@@ -37,6 +37,7 @@
 ### 垂直滚动
 
 设置属性 `vertical` 可以开启垂直滚动。
+
 注意：垂直滚动需要使用 `NoticeBarItem` 组件。
 
 ```html
