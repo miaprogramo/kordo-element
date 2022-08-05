@@ -1,7 +1,10 @@
+import Message from "element-ui/lib/message";
+import "element-ui/lib/theme-chalk/message.css";
+
 const defaultSuccessTip = "复制成功";
 const defaultErrorTip = "复制失败";
 
-export default function ({
+export default function({
   text = "",
   successTip = defaultSuccessTip,
   errorTip = defaultErrorTip,
@@ -29,14 +32,14 @@ export default function ({
   try {
     succeeded = document.execCommand("copy");
     if (showTip) {
-      this.$message.success(successTip);
+      Message.success(successTip);
     }
     document.body.removeChild($textarea);
     if (success) success.call();
   } catch (err) {
     succeeded = false;
     if (showTip) {
-      this.$message.error(errorTip);
+      Message.error(errorTip);
     }
     document.body.removeChild($textarea);
     if (error) error.call();
