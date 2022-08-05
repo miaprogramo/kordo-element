@@ -1,0 +1,15 @@
+{
+  "affix": "./src/components/affix/index.js",
+  "count-down": "./src/components/count-down/index.js",
+  "count-up": "./src/components/count-up/index.js",
+  "ellipsis": "./src/components/ellipsis/index.js",
+  "grid": "./src/components/grid/index.js",
+  "grid-item": "./src/components/grid-item/index.js",
+  "icon": "./src/components/icon/index.js",
+  "notice-bar": "./src/components/notice-bar/index.js",
+  "notice-bar-item": "./src/components/notice-bar-item/index.js",
+  "numeral": "./src/components/numeral/index.js",
+  "space": "./src/components/space/index.js",
+  "time": "./src/components/time/index.js",
+  "tooltip": "./src/components/tooltip/index.js"
+}
