@@ -6,13 +6,13 @@ export default {
     function resizeHandler(e) {
       binding.value(e);
     }
-    el.__resizeHandler__ = resizeHandler;
-    el.__observer__ = elementResizeDetectorMaker();
-    el.__observer__.listenTo(el, resizeHandler);
+    el.__resizeHandler = resizeHandler;
+    el.__observer = elementResizeDetectorMaker();
+    el.__observer.listenTo(el, resizeHandler);
   },
   unbind(el) {
-    el.__observer__.removeListener(el, el.__resizeHandler__);
-    delete el.__resizeHandler__;
-    delete el.__observer__;
+    el.__observer__.removeListener(el, el.__resizeHandler);
+    delete el.__resizeHandler;
+    delete el.__observer;
   },
 };

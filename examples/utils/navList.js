@@ -117,6 +117,11 @@ export const directives = [
   {
     path: "/directives/intersect",
     name: "Intersect",
-    title: "v-intersect 元素曝光",
+    title: "v-intersect 监听元素曝光",
+  },
+  {
+    path: "/directives/scroll",
+    name: "Scroll",
+    title: "v-scroll 监听滚动",
   },
 ];

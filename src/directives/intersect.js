@@ -2,10 +2,10 @@ export default {
   inserted(el, binding) {
     const callback = binding.value.callback;
     const options = binding.value.options || {};
-    el._observe = new IntersectionObserver(callback, options);
-    el._observe.observe(el);
+    el.__observe = new IntersectionObserver(callback, options);
+    el.__observe.observe(el);
   },
   unbind(el) {
-    el._observe.unobserve(el);
+    el.__observe.unobserve(el);
   },
 };

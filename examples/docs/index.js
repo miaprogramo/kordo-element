@@ -20,4 +20,5 @@ export { default as ScrollTo } from "./methods/scroll-to.md";
 export { default as Intersect } from "./directives/intersect.md";
 export { default as LineClamp } from "./directives/line-clamp.md";
 export { default as Resize } from "./directives/resize.md";
+export { default as Scroll } from "./directives/scroll.md";
 export { default as Style } from "./directives/style.md";

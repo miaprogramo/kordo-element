@@ -1,4 +1,4 @@
-## 元素曝光：v-intersect
+## 监听元素曝光：v-intersect
 
 `v-intersect` 指令使用 [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)。 它提供了一个易于使用的接口，用于检测元素在用户视图中是否可见。
 
@@ -68,7 +68,7 @@
 
 ### v-intersect Params
 
-| 参数     | 说明                                                         | 类型     | 默认值 |
-| -------- | ------------------------------------------------------------ | -------- | ------ |
-| callback | 回调函数                                                     | function | -      |
-| options  | 可用的选项可以在 [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) 中找到 | object   | {}     |
+| 参数     | 说明                                                                                                                            | 类型                        | 默认值 |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------ |
+| callback | 回调函数                                                                                                                        | function(entries, observer) | -      |
+| options  | 可用的选项可以在 [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) 中找到 | object                      | {}     |
