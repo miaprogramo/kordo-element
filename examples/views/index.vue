@@ -2,6 +2,9 @@
   <div class="home">
     <div class="header">
       <div class="title">Kordo Element</div>
+      <div class="github"
+        ><k-icon name="github" size="36" @click="goGithub"
+      /></div>
     </div>
     <div class="page-content">
       <div class="sider">
@@ -34,6 +37,9 @@ export default {
     },
   },
   methods: {
+    goGithub() {
+      window.open("https://github.com/miaprogramo/kordo-element", "_black");
+    },
     markdownChange() {
       this.source = docs[this.$route.name];
       document.documentElement.scrollTop = 0;
@@ -58,11 +64,18 @@ export default {
   background-color: #fff;
   box-sizing: border-box;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   .title {
     color: @primary-color;
     font-size: 28px;
     font-weight: 700;
     line-height: 60px;
+  }
+  .github {
+    font-size: 36px;
+    cursor: pointer;
   }
 }
 .page-content {
