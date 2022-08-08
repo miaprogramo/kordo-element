@@ -1,7 +1,7 @@
 <template>
   <div
     ref="vertical"
-    :class="[prefixCls + '-vertical-content']"
+    :class="[prefixCls + '-vertical_content']"
     :style="styles"
   >
     <slot></slot>

@@ -107,7 +107,7 @@ export default {
     },
     contentClasses() {
       return [
-        prefixCls + "-wrap",
+        prefixCls + "_wrap",
         {
           [prefixCls + "-vertical"]: this.vertical,
           [prefixCls + "-horizontal"]: !this.vertical,

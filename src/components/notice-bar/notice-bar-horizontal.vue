@@ -27,7 +27,7 @@ export default {
     },
     classes() {
       return [
-        prefixCls + "-horizontal-content",
+        prefixCls + "-horizontal_content",
         {
           [prefixCls + "_scrollable"]: this.scrollable || this.overflow,
         },

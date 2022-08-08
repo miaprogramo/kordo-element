@@ -46,7 +46,7 @@ export default {
   computed: {
     classes() {
       let classes = [prefixCls];
-      if (this.vertical) classes.push(prefixCls + "-vertical");
+      if (this.vertical) classes.push(prefixCls + "_vertical");
       return classes;
     },
     styles() {
@@ -83,7 +83,7 @@ export default {
         const item = h("div", { class: prefixCls + "-item" }, [child]);
 
         if (spacer && index + 1 < len) {
-          return [item, h("div", { class: prefixCls + "-spacer" }, [spacer])];
+          return [item, h("div", { class: prefixCls + "_spacer" }, [spacer])];
         }
 
         return item;
