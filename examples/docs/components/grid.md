@@ -14,7 +14,7 @@
 
 ```html
 <template>
-  <k-grid :col="4" :gutter="10">
+  <k-grid :col="4">
     <k-grid-item>1</k-grid-item>
     <k-grid-item>2</k-grid-item>
     <k-grid-item>3</k-grid-item>
@@ -37,9 +37,6 @@
     <k-grid-item>1</k-grid-item>
     <k-grid-item>2</k-grid-item>
     <k-grid-item>3</k-grid-item>
-    <k-grid-item>4</k-grid-item>
-    <k-grid-item>5</k-grid-item>
-    <k-grid-item>6</k-grid-item>
   </k-grid>
 </template>
 ```
@@ -50,7 +47,7 @@
 
 ```html
 <template>
-  <k-grid center square>
+  <k-grid square center>
     <k-grid-item>1</k-grid-item>
     <k-grid-item>2</k-grid-item>
     <k-grid-item>3</k-grid-item>
