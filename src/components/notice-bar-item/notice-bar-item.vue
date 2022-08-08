@@ -9,6 +9,7 @@ const prefixCls = config.prefix + "notice-bar-item";
 
 export default {
   name: prefixCls,
+  emits: ["click"],
   data() {
     return {
       prefixCls,

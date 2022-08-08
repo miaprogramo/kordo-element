@@ -30,6 +30,7 @@ const prefixCls = config.prefix + "notice-bar";
 export default {
   name: prefixCls,
   components: { Icon, NoticeBarVertical, NoticeBarHorizontal },
+  emits: ["close"],
   props: {
     // 是否垂直滚动
     vertical: {
