@@ -1,24 +1,31 @@
 /**
  * 限制文本最多显示几行，以...结束，仅适用于 webkit 内核浏览器
  * */
-import { addClass, removeClass } from "../../utils/assist.js";
-import config from "../../config";
-const prefixCls = config.prefix + "line-clamp";
-
 export default {
   bind(el, binding) {
-    if (binding.value) {
-      addClass(el, prefixCls);
-      el.style["-webkit-line-clamp"] = binding.value;
+    el.style.display = "-webkit-inline-box";
+    el.style.overflow = "hidden";
+    el.style["-webkit-box-orient"] = "vertical";
+    let line = 1;
+    if (!isNaN(binding.value)) {
+      line = binding.value;
     }
+    el.style["-webkit-line-clamp"] = line;
   },
   componentUpdated(el, binding) {
+    el.style.display = "-webkit-inline-box";
+    el.style.overflow = "hidden";
+    el.style["-webkit-box-orient"] = "vertical";
+    let line = 1;
     if (binding.value) {
-      el.style["-webkit-line-clamp"] = binding.value;
+      line = binding.value;
     }
+    el.style["-webkit-line-clamp"] = line;
   },
   unbind(el) {
-    removeClass(el, prefixCls);
+    el.style.display = null;
+    el.style.overflow = null;
+    el.style["-webkit-box-orient"] = null;
     el.style["-webkit-line-clamp"] = null;
   },
 };
