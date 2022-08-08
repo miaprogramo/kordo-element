@@ -127,6 +127,6 @@ export const directives = [
   {
     path: "/directives/scroll",
     name: "Scroll",
-    title: "v-scroll 监听滚动",
+    title: "v-scroll 监听元素滚动",
   },
 ];
