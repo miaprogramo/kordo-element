@@ -2,6 +2,8 @@
 
 文本过长自动处理省略号。
 
+基于 `-webkit-line-clamp` 的多行省略。兼容性参见 [caniuse](https://caniuse.com/?search=line-clamp)。
+
 :::demo
 
 ### 基础用法
