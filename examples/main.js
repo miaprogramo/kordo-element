@@ -23,7 +23,9 @@ import {
   Slider,
   Tooltip,
   Card,
+  Notification,
 } from "element-ui";
+
 Vue.use(Row)
   .use(Col)
   .use(Button)
@@ -34,6 +36,8 @@ Vue.use(Row)
   .use(Slider)
   .use(Tooltip)
   .use(Card);
+
+Vue.prototype.$notify = Notification;
 
 import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
 Vue.component(CollapseTransition.name, CollapseTransition);
