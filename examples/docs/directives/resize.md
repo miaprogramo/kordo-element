@@ -10,7 +10,7 @@
 
 ```html
 <template>
-  <div v-resize="handleResize">
+  <div v-resize="onResize">
     <p>当宽度变化时，会触发事件</p>
     <p>当前宽度为：{{width}}</p>
   </div>
@@ -23,7 +23,7 @@
       };
     },
     methods: {
-      handleResize(el) {
+      onResize(el) {
         this.width = el.offsetWidth;
       },
     },
