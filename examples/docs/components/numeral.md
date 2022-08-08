@@ -52,12 +52,12 @@
 
 ### Numeral Attributes
 
-| 属性   | 说明                         | 类型                   | 默认值 |
-| ------ | ---------------------------- | ---------------------- | ------ |
-| value  | 数值，也可以直接使用 v-model | number,string          | -      |
-| format | 格式，详情见下文             | string                 | -      |
-| prefix | 自定义显示格式               | function(currentValue) | -      |
-| suffix | 倒计时结束时的钩子           | function               | -      |
+| 属性   | 说明                         | 类型          | 默认值 |
+| ------ | ---------------------------- | ------------- | ------ |
+| value  | 数值，也可以直接使用 v-model | number,string | -      |
+| format | 格式，详情见下文             | string        | -      |
+| prefix | 前缀                         | string        | -      |
+| suffix | 后缀                         | string        | -      |
 
 ### Format
 
