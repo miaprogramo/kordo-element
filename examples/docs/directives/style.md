@@ -85,7 +85,7 @@
 <template>
   <div>
     <span v-font="24">这是一个 span</span>
-    图标也可以：<k-icon name="github" v-font="24" />
+    图标也可以：<k-icon name="github" :size="24" />
   </div>
 </template>
 ```
