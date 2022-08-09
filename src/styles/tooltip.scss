@@ -1,4 +1,4 @@
-@import "common/var";
+@import "common";
 @import "mixins/tooltip";
 
 $tooltip-prefix-cls: #{$css-prefix}tooltip;
@@ -44,7 +44,7 @@ $tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
       margin-left: -$tooltip-arrow-width-light;
       border-bottom-width: 0;
       border-top-width: $tooltip-arrow-width-light;
-      border-top-color: #fff;
+      border-top-color: $--color-white;
     }
 
     &[x-placement^="right"] .#{$tooltip-arrow}:after {
@@ -53,7 +53,7 @@ $tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
       bottom: -$tooltip-arrow-width-light;
       border-left-width: 0;
       border-right-width: $tooltip-arrow-width-light;
-      border-right-color: #fff;
+      border-right-color: $--color-white;
     }
 
     &[x-placement^="bottom"] .#{$tooltip-arrow}:after {
@@ -62,7 +62,7 @@ $tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
       margin-left: -$tooltip-arrow-width-light;
       border-top-width: 0;
       border-bottom-width: $tooltip-arrow-width-light;
-      border-bottom-color: #fff;
+      border-bottom-color: $--color-white;
     }
 
     &[x-placement^="left"] .#{$tooltip-arrow}:after {
@@ -70,7 +70,7 @@ $tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
       right: 1px;
       border-right-width: 0;
       border-left-width: $tooltip-arrow-width-light;
-      border-left-color: #fff;
+      border-left-color: $--color-white;
       bottom: -$tooltip-arrow-width-light;
     }
   }
@@ -98,7 +98,7 @@ $tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
 
   &-light &-inner {
     box-shadow: $--box-shadow-light;
-    background-color: #fff;
+    background-color: $--color-white;
     color: $--color-text-primary;
   }
 

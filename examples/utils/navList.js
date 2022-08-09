@@ -15,6 +15,11 @@ export const guides = [
     name: "Quickstart",
     title: "快速上手",
   },
+  {
+    path: "/guides/custom-theme",
+    name: "CustomTheme",
+    title: "自定义主题",
+  },
 ];
 // 组件
 export const components = [

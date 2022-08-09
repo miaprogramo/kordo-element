@@ -133,6 +133,7 @@ module.exports = {
     alias: {
       vue: "vue/dist/vue.esm.js",
       "@": path.resolve(__dirname, "../examples"),
+      lib: path.resolve(__dirname, "../lib"),
     },
   },
   plugins: [new webpack.optimize.ModuleConcatenationPlugin()],

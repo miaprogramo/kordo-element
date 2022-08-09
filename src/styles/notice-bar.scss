@@ -1,4 +1,4 @@
-@import "common/var";
+@import "common";
 
 $notice-bar-prefix-cls: #{$css-prefix}notice-bar;
 $notice-bar-vertical-prefix-cls: #{$css-prefix}notice-bar-vertical;
@@ -8,7 +8,7 @@ $notice-bar-animation: #{$css-prefix}notice-bar-animation;
 .#{$notice-bar-prefix-cls} {
   display: flex;
   align-items: center;
-  color: $--color-primary;
+  color: $--notice-bar-text-color;
   background-color: $--notice-bar-background-color;
   &_wrap {
     position: relative;

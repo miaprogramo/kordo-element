@@ -1,4 +1,5 @@
 /** guides */
+export { default as CustomTheme } from "./guides/custom-theme.md";
 export { default as Introduce } from "./guides/introduce.md";
 export { default as Installation } from "./guides/installation.md";
 export { default as Quickstart } from "./guides/quickstart.md";
