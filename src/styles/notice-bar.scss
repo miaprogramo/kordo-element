@@ -10,20 +10,20 @@ $--notice-bar-icon-min-width: 24px;
   color: $--notice-bar-text-color;
   background-color: $--notice-bar-background-color;
 
-  &_wrap {
+  &__wrap {
     position: relative;
     flex: 1;
     height: 100%;
     display: flex;
     overflow: hidden;
   }
-  &_left-icon {
+  &__left-icon {
     min-width: $--notice-bar-icon-min-width;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  &_right-icon {
+  &__right-icon {
     min-width: $--notice-bar-icon-min-width;
     display: flex;
     align-items: center;

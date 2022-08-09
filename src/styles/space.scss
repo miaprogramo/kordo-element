@@ -10,7 +10,7 @@ $--space-item-prefix-cls: #{$--css-prefix}space-item;
     flex-direction: column;
   }
 
-  &_spacer {
+  &__spacer {
     display: flex;
     align-items: center;
     justify-content: center;

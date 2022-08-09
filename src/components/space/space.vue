@@ -85,7 +85,7 @@ export default {
         const item = h("div", { class: prefixCls + "-item" }, [child]);
 
         if (spacer && index + 1 < len) {
-          return [item, h("div", { class: prefixCls + "_spacer" }, [spacer])];
+          return [item, h("div", { class: prefixCls + "__spacer" }, [spacer])];
         }
 
         return item;

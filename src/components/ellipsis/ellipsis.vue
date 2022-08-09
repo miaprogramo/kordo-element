@@ -102,7 +102,7 @@ export default {
         prefixCls,
         {
           ["is-expand"]: this.expand,
-          [prefixCls + "_line-clamp"]: this.hiddren,
+          [prefixCls + "__line-clamp"]: this.hiddren,
         },
       ];
     },

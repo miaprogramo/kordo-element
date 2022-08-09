@@ -1,6 +1,6 @@
 <template>
   <div v-if="isShow" :class="[prefixCls]" :style="styles">
-    <div :class="[prefixCls + '_left-icon']">
+    <div :class="[prefixCls + '__left-icon']">
       <slot name="left-icon">
         <Icon name="volume-notice" />
       </slot>
@@ -13,7 +13,7 @@
         <slot></slot>
       </notice-bar-horizontal>
     </div>
-    <div :class="[prefixCls + '_right-icon']">
+    <div :class="[prefixCls + '__right-icon']">
       <slot name="right-icon" v-if="closable">
         <Icon name="close-small" @click="close" />
       </slot>
@@ -103,7 +103,7 @@ export default {
     },
     contentClasses() {
       return [
-        prefixCls + "_wrap",
+        prefixCls + "__wrap",
         {
           ["is-vertical"]: this.vertical,
           ["is-horizontal"]: !this.vertical,

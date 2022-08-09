@@ -1,5 +1,5 @@
 <template>
-  <div ref="vertical" :class="[prefixCls + '_content']" :style="styles">
+  <div ref="vertical" :class="[prefixCls + '__content']" :style="styles">
     <slot></slot>
   </div>
 </template>
