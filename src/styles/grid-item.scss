@@ -1,0 +1,8 @@
+@import "common/var";
+
+$grid-item-prefix-cls: #{$css-prefix}grid-item;
+
+.#{$grid-item-prefix-cls} {
+  display: inline-grid;
+  box-sizing: border-box;
+}

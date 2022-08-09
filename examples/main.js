@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 
 import KordoElement from "kordo-element";
-import "kordo-element/styles/index.less";
+import "kordo-element/styles/index.scss";
 Vue.use(KordoElement);
 
 import CodeView from "vue-code-view";

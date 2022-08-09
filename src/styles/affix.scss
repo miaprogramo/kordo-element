@@ -1,0 +1,7 @@
+@import "common/var";
+
+$affix-prefix-cls: #{$css-prefix}affix;
+
+.#{$affix-prefix-cls} {
+  position: fixed;
+}

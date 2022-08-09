@@ -1,0 +1,9 @@
+@import "common/var";
+
+$notice-bar-item-prefix-cls: #{$css-prefix}notice-bar-item;
+
+.#{$notice-bar-item-prefix-cls} {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

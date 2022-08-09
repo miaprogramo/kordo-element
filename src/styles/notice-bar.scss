@@ -1,15 +1,15 @@
 @import "common/var";
 
-@notice-bar-prefix-cls: ~"@{css-prefix}notice-bar";
-@notice-bar-vertical-prefix-cls: ~"@{css-prefix}notice-bar-vertical";
-@notice-bar-horizontal-prefix-cls: ~"@{css-prefix}notice-bar-horizontal";
-@notice-bar-animation: ~"@{css-prefix}notice-bar-animation";
+$notice-bar-prefix-cls: #{$css-prefix}notice-bar;
+$notice-bar-vertical-prefix-cls: #{$css-prefix}notice-bar-vertical;
+$notice-bar-horizontal-prefix-cls: #{$css-prefix}notice-bar-horizontal;
+$notice-bar-animation: #{$css-prefix}notice-bar-animation;
 
-.@{notice-bar-prefix-cls} {
+.#{$notice-bar-prefix-cls} {
   display: flex;
   align-items: center;
-  color: @primary-color;
-  background-color: @notice-bar-bg;
+  color: $--color-primary;
+  background-color: $--notice-bar-background-color;
   &_wrap {
     position: relative;
     flex: 1;
@@ -31,27 +31,27 @@
   }
 }
 
-.@{notice-bar-vertical-prefix-cls} {
+.#{$notice-bar-vertical-prefix-cls} {
   width: 100%;
   overflow: hidden;
 }
 
-.@{notice-bar-horizontal-prefix-cls} {
+.#{$notice-bar-horizontal-prefix-cls} {
   align-items: center;
   &_content {
     position: absolute;
     white-space: nowrap;
-    &.@{notice-bar-prefix-cls} {
+    &.#{$notice-bar-prefix-cls} {
       &_scrollable {
         padding-left: 100%;
         display: inline-block;
-        animation: @notice-bar-animation linear 0s infinite both;
+        animation: $notice-bar-animation linear 0s infinite both;
       }
     }
   }
 }
 
-@keyframes @notice-bar-animation {
+@keyframes #{$notice-bar-animation} {
   from {
     transform: translate3d(0, 0, 0);
   }
