@@ -72,6 +72,8 @@ export default {
     },
   },
   render(h) {
+    if (!this.$slots.default) return h("div", { class: prefixCls }, "");
+
     const items = this.$slots.default.filter((child) => child.text !== " ");
     const len = items.length;
     const spacer = this.$slots.spacer || this.spacer;
