@@ -1,15 +1,16 @@
 @import "common";
 
-$space-prefix-cls: #{$css-prefix}space;
-$space-item-prefix-cls: #{$css-prefix}space-item;
+$--space-prefix-cls: #{$--css-prefix}space;
+$--space-item-prefix-cls: #{$--css-prefix}space-item;
 
-.#{$space-prefix-cls} {
+.#{$--space-prefix-cls} {
   display: flex;
-  &_vertical {
+  &.is-vertical {
     flex-direction: column;
   }
   &_spacer {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }

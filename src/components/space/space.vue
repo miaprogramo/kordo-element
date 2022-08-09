@@ -46,7 +46,7 @@ export default {
   computed: {
     classes() {
       let classes = [prefixCls];
-      if (this.vertical) classes.push(prefixCls + "_vertical");
+      if (this.vertical) classes.push("is-vertical");
       return classes;
     },
     styles() {

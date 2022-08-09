@@ -105,8 +105,8 @@ export default {
       return [
         prefixCls + "_wrap",
         {
-          [prefixCls + "-vertical"]: this.vertical,
-          [prefixCls + "-horizontal"]: !this.vertical,
+          ["is-vertical"]: this.vertical,
+          ["is-horizontal"]: !this.vertical,
         },
       ];
     },

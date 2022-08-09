@@ -1,35 +1,33 @@
 @import "common";
 
-$grid-prefix-cls: #{$css-prefix}grid;
-$grid-item-prefix-cls: #{$css-prefix}grid-item;
-$grid-border: 1px solid $--border-color-base;
+$--grid-prefix-cls: #{$--css-prefix}grid;
+$--grid-item-prefix-cls: #{$--css-prefix}grid-item;
+$--grid-border: 1px solid $--border-color-base;
 
-.#{$grid-prefix-cls} {
+.#{$--grid-prefix-cls} {
   display: grid;
   box-sizing: border-box;
-  &_square {
-    .#{$grid-item-prefix-cls} {
+  &.is-square {
+    .#{$--grid-item-prefix-cls} {
       aspect-ratio: 1;
     }
   }
-  &_center {
-    .#{$grid-item-prefix-cls} {
+  &.is-center {
+    .#{$--grid-item-prefix-cls} {
       align-items: center;
       justify-content: center;
     }
   }
-  &_border {
-    &.#{$grid-prefix-cls} {
-      border-top: $grid-border;
-      border-left: $grid-border;
-    }
-    .#{$grid-item-prefix-cls} {
-      border-right: $grid-border;
-      border-bottom: $grid-border;
+  &.is-border {
+    border-top: $--grid-border;
+    border-left: $--grid-border;
+    .#{$--grid-item-prefix-cls} {
+      border-right: $--grid-border;
+      border-bottom: $--grid-border;
     }
   }
-  &_hover {
-    .#{$grid-item-prefix-cls} {
+  &.is-hover-shadow {
+    .#{$--grid-item-prefix-cls} {
       &:hover {
         box-shadow: $--box-shadow-light;
       }
