@@ -4,6 +4,7 @@ $notice-bar-prefix-cls: #{$css-prefix}notice-bar;
 $notice-bar-vertical-prefix-cls: #{$css-prefix}notice-bar-vertical;
 $notice-bar-horizontal-prefix-cls: #{$css-prefix}notice-bar-horizontal;
 $notice-bar-animation: #{$css-prefix}notice-bar-animation;
+$notice-bar-icon-min-width: 24px;
 
 .#{$notice-bar-prefix-cls} {
   display: flex;
@@ -18,13 +19,13 @@ $notice-bar-animation: #{$css-prefix}notice-bar-animation;
     overflow: hidden;
   }
   &_left-icon {
-    min-width: 24px;
+    min-width: $notice-bar-icon-min-width;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   &_right-icon {
-    min-width: 24px;
+    min-width: $notice-bar-icon-min-width;
     display: flex;
     align-items: center;
     justify-content: center;

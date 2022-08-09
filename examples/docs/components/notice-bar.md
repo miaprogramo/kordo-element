@@ -63,14 +63,14 @@
 
 ### NoticeBar Attributes
 
-| 属性       | 说明             | 类型    | 默认     |
-| ---------- | ---------------- | ------- | -------- |
-| vertical   | 是否垂直滚动     | boolean | false    |
-| width      | 宽度，单位：px   | number  | -        |
-| height     | 高度，单位：px   | number  | 40       |
-| color      | 文本颜色         | string  | \#409eff |
-| background | 背景颜色         | string  | \#ecf5ff |
-| closable   | 是否开启关闭按钮 | boolean | false    |
+| 属性       | 说明               | 类型          | 默认  |
+| ---------- | ------------------ | ------------- | ----- |
+| vertical   | 是否垂直滚动       | boolean       | false |
+| width      | 宽度，默认单位：px | number,string | -     |
+| height     | 高度，默认单位：px | number,string | 40    |
+| color      | 文本颜色           | string        | -     |
+| background | 背景颜色           | string        | -     |
+| closable   | 是否开启关闭按钮   | boolean       | false |
 
 ### NoticeBar Attributes (vertical=false)
 

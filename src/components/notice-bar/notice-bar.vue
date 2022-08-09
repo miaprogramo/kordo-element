@@ -38,25 +38,16 @@ export default {
       default: false,
     },
     // 宽度
-    width: {
-      type: Number,
-      default: null,
-    },
+    width: [Number, String],
     // 高度
     height: {
-      type: Number,
+      type: [Number, String],
       default: 40,
     },
     // 文本颜色
-    color: {
-      type: String,
-      default: "#409eff",
-    },
+    color: String,
     // 背景颜色
-    background: {
-      type: String,
-      default: "#ecf5ff",
-    },
+    background: String,
     // 是否开启关闭按钮
     closable: {
       type: Boolean,
@@ -98,12 +89,17 @@ export default {
   },
   computed: {
     styles() {
-      return {
-        width: this.width ? this.width + "px" : "auto",
-        height: this.height + "px",
-        color: this.color,
-        "background-color": this.background,
+      let styles = {
+        height:
+          typeof this.height === "number" ? this.height + "px" : this.height,
       };
+      if (this.width)
+        styles.width =
+          typeof this.width === "number" ? this.width + "px" : this.width;
+      if (this.color) styles.color = this.color;
+      if (this.background) styles.backgroundColor = this.background;
+
+      return styles;
     },
     contentClasses() {
       return [
