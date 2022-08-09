@@ -11,10 +11,10 @@
 ```html
 <template>
   <k-space>
-    <el-button type="text">Text</el-button>
+    <!-- <el-button type="text">Text</el-button>
     <el-button>Default</el-button>
     <el-button type="primary">Primary</el-button>
-    <el-button type="success">Success</el-button>
+    <el-button type="success">Success</el-button> -->
   </k-space>
 </template>
 ```
