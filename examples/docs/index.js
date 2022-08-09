@@ -7,6 +7,7 @@ export { default as Quickstart } from "./guides/quickstart.md";
 export { default as Affix } from "./components/affix.md";
 export { default as CountDown } from "./components/count-down.md";
 export { default as CountUp } from "./components/count-up.md";
+export { default as Descriptions } from "./components/descriptions.md";
 export { default as Ellipsis } from "./components/ellipsis.md";
 export { default as Grid } from "./components/grid.md";
 export { default as NoticeBar } from "./components/notice-bar.md";

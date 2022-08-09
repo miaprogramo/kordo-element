@@ -1,0 +1,27 @@
+@import "common";
+
+$--descriptions-prefix-cls: #{$--css-prefix}descriptions;
+
+.#{$--descriptions-prefix-cls} {
+  font-size: $--descriptions-font-size-base;
+  font-weight: $--descriptions-font-weight-base;
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $--margin-md;
+  }
+
+  &_title {
+    font-size: $--descriptions-title-font-size;
+    font-weight: $--descriptions-title-font-weight;
+  }
+
+  &_body {
+    width: 100%;
+  }
+
+  &__label {
+  }
+}
