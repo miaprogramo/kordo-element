@@ -37,7 +37,7 @@ $--notice-bar-icon-min-width: 24px;
 
   .is-horizontal {
     align-items: center;
-    .#{$--notice-bar-prefix-cls}_content {
+    .#{$--notice-bar-prefix-cls}__content {
       position: absolute;
       white-space: nowrap;
       &.is-scrollable {
