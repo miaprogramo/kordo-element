@@ -7,17 +7,20 @@ $--grid-border: 1px solid $--border-color-base;
 .#{$--grid-prefix-cls} {
   display: grid;
   box-sizing: border-box;
+
   &.is-square {
     .#{$--grid-item-prefix-cls} {
       aspect-ratio: 1;
     }
   }
+
   &.is-center {
     .#{$--grid-item-prefix-cls} {
       align-items: center;
       justify-content: center;
     }
   }
+
   &.is-border {
     border-top: $--grid-border;
     border-left: $--grid-border;
@@ -26,6 +29,7 @@ $--grid-border: 1px solid $--border-color-base;
       border-bottom: $--grid-border;
     }
   }
+
   &.is-hover-shadow {
     .#{$--grid-item-prefix-cls} {
       &:hover {

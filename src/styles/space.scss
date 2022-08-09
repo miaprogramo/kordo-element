@@ -5,9 +5,11 @@ $--space-item-prefix-cls: #{$--css-prefix}space-item;
 
 .#{$--space-prefix-cls} {
   display: flex;
+
   &.is-vertical {
     flex-direction: column;
   }
+
   &_spacer {
     display: flex;
     align-items: center;
