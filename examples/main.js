@@ -3,8 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 
 import KordoElement from "kordo-element";
-// import "kordo-element/styles/index.scss";
-import "./theme.scss";
+import "kordo-element/styles/index.scss";
 Vue.use(KordoElement);
 
 import CodeView from "vue-code-view";
@@ -14,6 +13,7 @@ import "highlight.js/styles/default.css";
 import "./styles/index.less";
 
 import {
+  Icon,
   Row,
   Col,
   Button,
@@ -27,7 +27,8 @@ import {
   Notification,
 } from "element-ui";
 
-Vue.use(Row)
+Vue.use(Icon)
+  .use(Row)
   .use(Col)
   .use(Button)
   .use(Radio)
