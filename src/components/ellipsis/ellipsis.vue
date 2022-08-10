@@ -42,7 +42,7 @@ export default {
     },
     // 限制行数
     line: {
-      type: Boolean,
+      type: Number,
       Number: 1,
     },
     // 是否开启点击展开
