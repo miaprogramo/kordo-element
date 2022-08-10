@@ -83,11 +83,7 @@ export default {
     },
     transfer: {
       type: Boolean,
-      default() {
-        return !this.$IVIEW || this.$IVIEW.transfer === ""
-          ? false
-          : this.$IVIEW.transfer;
-      },
+      default: true,
     },
     theme: {
       validator(value) {
