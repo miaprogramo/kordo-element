@@ -38,7 +38,7 @@ export default {
     // 限制行数
     line: {
       type: Number,
-      Number: 1,
+      default: 1,
     },
     // 是否开启点击展开
     expand: {
@@ -102,6 +102,7 @@ export default {
       ];
     },
     styles() {
+      console.log(this.line);
       let styles = {};
       if (this.hiddren) styles["-webkit-line-clamp"] = this.line;
       return styles;
