@@ -63,21 +63,21 @@
 
 ### NoticeBar Attributes
 
-| 属性       | 说明               | 类型          | 默认  |
-| ---------- | ------------------ | ------------- | ----- |
-| vertical   | 是否垂直滚动       | boolean       | false |
-| width      | 宽度，默认单位：px | number,string | -     |
-| height     | 高度，默认单位：px | number,string | 40    |
-| color      | 文本颜色           | string        | -     |
-| background | 背景颜色           | string        | -     |
-| closable   | 是否开启关闭按钮   | boolean       | false |
+| 属性       | 说明               | 类型            | 默认  |
+| ---------- | ------------------ | --------------- | ----- |
+| vertical   | 是否垂直滚动       | boolean         | false |
+| width      | 宽度，默认单位：px | number / string | -     |
+| height     | 高度，默认单位：px | number/ string  | 40    |
+| color      | 文本颜色           | string          | -     |
+| background | 背景颜色           | string          | -     |
+| closable   | 是否开启关闭按钮   | boolean         | false |
 
 ### NoticeBar Attributes (vertical=false)
 
-| 属性       | 说明                                     | 类型    | 默认 |
-| ---------- | ---------------------------------------- | ------- | ---- |
-| scrollable | 是否开启滚动播放，内容长度溢出时默认开启 | boolean | true |
-| speed      | 滚动速率 (px/s)                          | number  | 60   |
+| 属性       | 说明                                     | 类型    | 默认  |
+| ---------- | ---------------------------------------- | ------- | ----- |
+| scrollable | 是否开启滚动播放，内容长度溢出时默认开启 | boolean | false |
+| speed      | 滚动速率 (px/s)                          | number  | 60    |
 
 ### NoticeBar Attributes (vertical=true)
 

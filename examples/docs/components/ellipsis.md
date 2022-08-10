@@ -89,9 +89,9 @@
 
 ### Ellipsis Attributes (tooltip=true)
 
-| 属性      | 说明                                                                                                                                                                   | 类型           | 默认值 |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ------ |
-| transfer  | 是否将弹层放置于 body 内，在 Tabs、带有 fixed 的 Table 列内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果                                            | boolean        | true   |
-| theme     | 主题，可选值为 `dark` 或 `light`                                                                                                                                       | string         | dark   |
-| max-width | 最大宽度，超出最大值后，文本将自动换行，并两端对齐                                                                                                                     | string, number | 240    |
-| placement | 提示框出现的位置，可选值为`top`、`top-start`、`top-end`、`bottom`、`bottom-start`、`bottom-end`、`left`、`left-start`、`left-end`、`right`、`right-start`、`right-end` | string         | bottom |
+| 属性      | 说明                                                                                                                                                                   | 类型            | 默认值 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------ |
+| transfer  | 是否将弹层放置于 body 内，在 Tabs、带有 fixed 的 Table 列内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果                                            | boolean         | true   |
+| theme     | 主题，可选值为 `dark` 或 `light`                                                                                                                                       | string          | dark   |
+| max-width | 最大宽度，超出最大值后，文本将自动换行，并两端对齐                                                                                                                     | number / string | 240    |
+| placement | 提示框出现的位置，可选值为`top`、`top-start`、`top-end`、`bottom`、`bottom-start`、`bottom-end`、`left`、`left-start`、`left-end`、`right`、`right-start`、`right-end` | string          | bottom |

@@ -10,33 +10,33 @@ const prefixCls = config.prefix + "grid";
 export default {
   name: prefixCls,
   props: {
+    // 最大支持的列数
     col: {
-      // 最大支持的列数
       type: Number,
       default: 3,
     },
-    square: {
-      // 是否宽高一致
-      type: Boolean,
-      default: false,
-    },
+    // 内容的间距，默认单位为px
     padding: {
-      // 内容的间距，默认单位为px
       type: [Number, String],
       default: 24,
     },
-    center: {
-      // 是否将格子内容居中显示
+    // 是否宽高一致
+    square: {
       type: Boolean,
       default: false,
     },
+    // 是否将格子内容居中显示
+    center: {
+      type: Boolean,
+      default: false,
+    },
+    // 是否显示边框
     border: {
-      // 是否显示边框
       type: Boolean,
       default: true,
     },
+    // 是否开启鼠标悬停效果
     hover: {
-      // 是否开启鼠标悬停效果
       type: Boolean,
       default: false,
     },

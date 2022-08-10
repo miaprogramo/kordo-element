@@ -13,18 +13,25 @@ export default {
   name: prefixCls,
   emits: ["change"],
   props: {
+    // 数值，也可以直接使用 v-model
     value: {
-      type: [String, Number],
+      type: [Number, String],
     },
+    // 格式
     format: {
       type: String,
     },
+    // 前缀
     prefix: {
       type: [String, Number],
     },
+    // 后缀
     suffix: {
       type: [String, Number],
     },
+  },
+  model: {
+    event: "change",
   },
   data() {
     return {
@@ -50,6 +57,7 @@ export default {
         } else {
           this.currentValue = num.value();
         }
+
         this.$emit("change", this.currentValue);
       }
     },

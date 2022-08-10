@@ -24,6 +24,7 @@ import {
   Slider,
   Tooltip,
   Card,
+  Message,
   Notification,
 } from "element-ui";
 
@@ -40,6 +41,7 @@ Vue.use(Icon)
   .use(Card);
 
 Vue.prototype.$notify = Notification;
+Vue.prototype.$message = Message;
 
 import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
 Vue.component(CollapseTransition.name, CollapseTransition);

@@ -14,7 +14,8 @@ export default {
   props: {
     // 目标时间
     target: {
-      type: [Date, Number],
+      type: [Number, Date],
+      default: 0,
     },
     // 自动倒计时间隔
     interval: {

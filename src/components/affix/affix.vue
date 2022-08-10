@@ -46,17 +46,21 @@ export default {
   name: prefixCls,
   emits: ["change"],
   props: {
+    // 距离窗口顶部达到指定偏移量后触发
     offsetTop: {
       type: Number,
       default: 0,
     },
+    // 距离窗口底部达到指定偏移量后触发
     offsetBottom: {
       type: Number,
     },
+    // addEventListener 原生的 useCapture 选项
     useCapture: {
       type: Boolean,
       default: false,
     },
+    // css属性z-index
     zIndex: {
       type: Number,
       default: 100,
@@ -70,7 +74,6 @@ export default {
       slotStyle: {},
     };
   },
-  watch: {},
   computed: {
     offsetType() {
       let type = "top";

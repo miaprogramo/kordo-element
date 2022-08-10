@@ -76,9 +76,9 @@
 
 ### Time Attributes
 
-| 属性     | 说明                                      | 类型               | 默认值   |
-| -------- | ----------------------------------------- | ------------------ | -------- |
-| time     | 需要对比的时间，可以是时间戳或 Date 类型  | number,string,date | -        |
-| type     | 类型，可选值为 relative、date 或 datetime | string             | relative |
-| interval | 自动更新的间隔，单位：秒                  | number             | 60       |
-| hash     | 填写该值，点击会定位锚点                  | string             | -        |
+| 属性     | 说明                                             | 类型                   | 默认值   |
+| -------- | ------------------------------------------------ | ---------------------- | -------- |
+| time     | 需要对比的时间，可以是时间戳或 Date 类型         | number / date / string | -        |
+| type     | 类型，可选值为 `relative` 、`date` 或 `datetime` | string                 | relative |
+| interval | 自动更新的间隔，单位：秒                         | number                 | 60       |
+| hash     | 填写该值，点击会定位锚点                         | string                 | -        |

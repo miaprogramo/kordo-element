@@ -131,14 +131,14 @@
 
 ### Grid Attributes
 
-| 属性    | 说明                      | 类型          | 默认值 |
-| ------- | ------------------------- | ------------- | ------ |
-| col     | 最大支持的列数            | number        | 3      |
-| square  | 是否宽高一致              | boolean       | false  |
-| padding | 内容的间距，默认单位为 px | number,string | 24     |
-| center  | 内容是否居中              | boolean       | false  |
-| border  | 是否显示边框              | boolean       | true   |
-| hover   | 是否开启鼠标悬停效果      | boolean       | false  |
+| 属性    | 说明                      | 类型            | 默认值 |
+| ------- | ------------------------- | --------------- | ------ |
+| col     | 最大支持的列数            | number          | 3      |
+| padding | 内容的间距，默认单位为 px | number / string | 24     |
+| square  | 是否宽高一致              | boolean         | false  |
+| center  | 内容是否居中              | boolean         | false  |
+| border  | 是否显示边框              | boolean         | true   |
+| hover   | 是否开启鼠标悬停效果      | boolean         | false  |
 
 ### GridItem Slots
 

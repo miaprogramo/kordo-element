@@ -49,7 +49,7 @@
 | 属性          | 说明                                    | 类型    | 默认值 |
 | ------------- | --------------------------------------- | ------- | ------ |
 | offset-top    | 距离窗口顶部达到指定偏移量后触发        | number  | 0      |
-| offset-bottom | 自动倒计时间隔，单位：毫秒              | number  | -      |
+| offset-bottom | 距离窗口底部达到指定偏移量后触发        | number  | -      |
 | use-capture   | addEventListener 原生的 useCapture 选项 | boolean | false  |
 | z-index       | css属性z-index                          | number  | 100    |
 

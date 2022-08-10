@@ -24,6 +24,7 @@
 import Icon from "../icon/icon";
 import NoticeBarVertical from "./notice-bar-vertical";
 import NoticeBarHorizontal from "./notice-bar-horizontal";
+import { oneOf } from "../../utils/assist";
 import config from "../../config";
 const prefixCls = config.prefix + "notice-bar";
 
@@ -68,6 +69,9 @@ export default {
     // 切换方向，可选值为 up 或 down
     direction: {
       type: String,
+      validator(value) {
+        return oneOf(value, ["up", "down"]);
+      },
       default: "up",
     },
     // 切换动画时间 (ms)
