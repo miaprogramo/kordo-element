@@ -123,7 +123,7 @@
 | align    | 垂直排列方式，可选值有 `stretch`、 `center`、 `flex-start`、 `flex-end`、 `baseline`                                                      | string              | stretch    |
 | justify  | 水平排列方式，可选值有 `flex-start`、 `flex-end`、 `center`、 `space-between`、 `space-evenly`、 `space-around`                           | string              | flex-start |
 | wrap     | 是否超出换行                                                                                                                              | boolean             | true       |
-| spacer   | 间隔符                                                                                                                                    | string,number       | -          |
+| spacer   | 间隔符                                                                                                                                    | string / number     | -          |
 
 ### Space Slots
 

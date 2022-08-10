@@ -12,10 +12,12 @@ export default {
   name: prefixCls,
   mixins: [Locale],
   props: {
+    // 需要对比的时间，可以是时间戳或 Date 类型
     time: {
       type: [Number, Date, String],
       required: true,
     },
+    // 类型，可选值为 relative 、date 或 datetime
     type: {
       type: String,
       validator(value) {
@@ -23,13 +25,15 @@ export default {
       },
       default: "relative",
     },
-    hash: {
-      type: String,
-      default: "",
-    },
+    // 自动更新的间隔，单位：秒
     interval: {
       type: Number,
       default: 60,
+    },
+    // 填写该值，点击会定位锚点
+    hash: {
+      type: String,
+      default: "",
     },
   },
   data() {

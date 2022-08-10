@@ -65,7 +65,7 @@
 
 | 属性     | 说明                       | 类型                                                | 默认值 |
 | -------- | -------------------------- | --------------------------------------------------- | ------ |
-| target   | 目标时间                   | number,date                                         | -      |
+| target   | 目标时间                   | number / date                                       | -      |
 | interval | 自动倒计时间隔，单位：毫秒 | number                                              | 1000   |
 | format   | 自定义显示格式             | function(currentValue,{days,hours,minutes,seconds}) | -      |
 | on-end   | 倒计时结束时的钩子         | function                                            | -      |

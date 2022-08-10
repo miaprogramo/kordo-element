@@ -100,7 +100,7 @@ export function warnProp(component, prop, correctType, wrongType) {
   correctType = firstUpperCase(correctType);
   wrongType = firstUpperCase(wrongType);
   console.error(
-    `[View UI warn]: Invalid prop: type check failed for prop ${prop}. Expected ${correctType}, got ${wrongType}. (found in component: ${component})`
+    `[Kordo Element warn]: Invalid prop: type check failed for prop ${prop}. Expected ${correctType}, got ${wrongType}. (found in component: ${component})`
   ); // eslint-disable-line
 }
 

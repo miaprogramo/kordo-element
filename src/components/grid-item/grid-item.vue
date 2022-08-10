@@ -14,6 +14,5 @@ export default {
       prefixCls,
     };
   },
-  methods: {},
 };
 </script>
