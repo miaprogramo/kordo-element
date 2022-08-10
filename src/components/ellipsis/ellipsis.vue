@@ -1,7 +1,10 @@
 <template>
   <div :class="prefixCls">
+    <span v-if="expand" :class="classes" :style="styles" @click="expandText">
+      <slot>{{ text }}</slot></span
+    >
     <Tooltip
-      v-if="tooltip && !expand"
+      v-else-if="tooltip"
       :content="text"
       :theme="theme"
       :max-width="maxWidth"
@@ -10,14 +13,6 @@
     >
       <span :class="classes" :style="styles">{{ text }}</span>
     </Tooltip>
-    <span
-      v-else-if="expand"
-      :class="classes"
-      :style="styles"
-      @click="expandText"
-    >
-      <slot>{{ text }}</slot></span
-    >
     <span v-else :class="classes" :style="styles">
       <slot>{{ text }}</slot></span
     >
@@ -53,7 +48,7 @@ export default {
     // 是否开启 tooltip
     tooltip: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     // 以下是 tooltip 部分选项
     transfer: {
