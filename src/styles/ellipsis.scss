@@ -1,15 +1,17 @@
 @import "common";
 
-$ellipsis-prefix-cls: #{$css-prefix}ellipsis;
+$--ellipsis-prefix-cls: #{$--css-prefix}ellipsis;
 
-.#{$ellipsis-prefix-cls} {
+.#{$--ellipsis-prefix-cls} {
   display: inline-block;
-  &_line-clamp {
+
+  &__line-clamp {
     display: -webkit-inline-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  &_expand {
+
+  &.is-expand {
     cursor: pointer;
   }
 }

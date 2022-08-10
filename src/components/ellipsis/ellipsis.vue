@@ -42,7 +42,7 @@ export default {
     },
     // 限制行数
     line: {
-      type: Boolean,
+      type: Number,
       Number: 1,
     },
     // 是否开启点击展开
@@ -101,8 +101,8 @@ export default {
       return [
         prefixCls,
         {
-          [prefixCls + "_expand"]: this.expand,
-          [prefixCls + "_line-clamp"]: this.hiddren,
+          ["is-expand"]: this.expand,
+          [prefixCls + "__line-clamp"]: this.hiddren,
         },
       ];
     },

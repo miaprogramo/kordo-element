@@ -83,7 +83,7 @@
 | 属性    | 说明             | 类型    | 默认值 |
 | ------- | ---------------- | ------- | ------ |
 | text    | 文本             | string  | -      |
-| line    | 限制行数         | number  | -      |
+| line    | 限制行数         | number  | 1      |
 | expand  | 是否开启点击展开 | boolean | false  |
 | tooltip | 是否开启 tooltip | boolean | false  |
 

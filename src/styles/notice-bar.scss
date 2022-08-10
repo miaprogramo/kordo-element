@@ -1,58 +1,55 @@
 @import "common";
 
-$notice-bar-prefix-cls: #{$css-prefix}notice-bar;
-$notice-bar-vertical-prefix-cls: #{$css-prefix}notice-bar-vertical;
-$notice-bar-horizontal-prefix-cls: #{$css-prefix}notice-bar-horizontal;
-$notice-bar-animation: #{$css-prefix}notice-bar-animation;
-$notice-bar-icon-min-width: 24px;
+$--notice-bar-prefix-cls: #{$--css-prefix}notice-bar;
+$--notice-bar-animation: #{$--css-prefix}notice-bar-animation;
+$--notice-bar-icon-min-width: 24px;
 
-.#{$notice-bar-prefix-cls} {
+.#{$--notice-bar-prefix-cls} {
   display: flex;
   align-items: center;
   color: $--notice-bar-text-color;
   background-color: $--notice-bar-background-color;
-  &_wrap {
+
+  &__wrap {
     position: relative;
     flex: 1;
     height: 100%;
     display: flex;
     overflow: hidden;
   }
-  &_left-icon {
-    min-width: $notice-bar-icon-min-width;
+  &__left-icon {
+    min-width: $--notice-bar-icon-min-width;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  &_right-icon {
-    min-width: $notice-bar-icon-min-width;
+  &__right-icon {
+    min-width: $--notice-bar-icon-min-width;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-}
 
-.#{$notice-bar-vertical-prefix-cls} {
-  width: 100%;
-  overflow: hidden;
-}
+  .is-vertical {
+    width: 100%;
+    overflow: hidden;
+  }
 
-.#{$notice-bar-horizontal-prefix-cls} {
-  align-items: center;
-  &_content {
-    position: absolute;
-    white-space: nowrap;
-    &.#{$notice-bar-prefix-cls} {
-      &_scrollable {
+  .is-horizontal {
+    align-items: center;
+    .#{$--notice-bar-prefix-cls}__content {
+      position: absolute;
+      white-space: nowrap;
+      &.is-scrollable {
         padding-left: 100%;
         display: inline-block;
-        animation: $notice-bar-animation linear 0s infinite both;
+        animation: $--notice-bar-animation linear 0s infinite both;
       }
     }
   }
 }
 
-@keyframes #{$notice-bar-animation} {
+@keyframes #{$--notice-bar-animation} {
   from {
     transform: translate3d(0, 0, 0);
   }

@@ -1,8 +1,8 @@
 @import "common";
 
-$icon-prefix-cls: #{$css-prefix}icon;
+$--icon-prefix-cls: #{$--css-prefix}icon;
 
-.#{$icon-prefix-cls} {
+.#{$--icon-prefix-cls} {
   width: 1em;
   height: 1em;
   font-size: $--font-size-icon;

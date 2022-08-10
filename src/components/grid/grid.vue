@@ -52,10 +52,10 @@ export default {
       return [
         prefixCls,
         {
-          [prefixCls + "_square"]: this.square,
-          [prefixCls + "_center"]: this.center,
-          [prefixCls + "_border"]: this.border,
-          [prefixCls + "_hover"]: this.hover,
+          ["is-square"]: this.square,
+          ["is-center"]: this.center,
+          ["is-border"]: this.border,
+          ["is-hover-shadow"]: this.hover,
         },
       ];
     },

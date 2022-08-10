@@ -23,8 +23,12 @@ $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 -------------------------- */
 /// Font
 $--font-size-base: 14px !default;
+$--font-size-small: 12px !default;
+$--font-size-medium: 16px !default;
 $--font-size-large: 18px !default;
 $--font-size-icon: 16px !default;
+$--font-weight-base: 400 !default;
+$--font-weight-bold: 700 !default;
 /// Line-height
 $--line-height-base: 1.5 !default;
 
@@ -43,6 +47,14 @@ $--margin-xs: $--margin-base * 2 !default;
 $--margin-sm: $--margin-base * 3 !default;
 $--margin-md: $--margin-base * 4 !default;
 $--margin-lg: $--margin-base * 6 !default;
+
+/* Descriptions 
+-------------------------- */
+/// Font
+$--descriptions-font-size-base: $--font-size-base;
+$--descriptions-title-font-size: $--font-size-medium;
+$--descriptions-font-weight-base: $--font-weight-base;
+$--descriptions-title-font-weight: $--font-weight-bold;
 
 /* Ellipsis Tooltip
 -------------------------- */

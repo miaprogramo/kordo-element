@@ -1,18 +1,18 @@
 @import "common";
 @import "mixins/tooltip";
 
-$tooltip-prefix-cls: #{$css-prefix}tooltip;
-$tooltip-arrow: #{$tooltip-prefix-cls}-arrow;
-$tooltip-max-width: 240px;
-$tooltip-arrow-width: 5px;
-$tooltip-distance: $tooltip-arrow-width - 1 + 4;
+$--tooltip-prefix-cls: #{$--css-prefix}tooltip;
+$--tooltip-arrow: #{$--tooltip-prefix-cls}-arrow;
+$--tooltip-max-width: 240px;
+$--tooltip-arrow-width: 5px;
+$--tooltip-distance: $--tooltip-arrow-width - 1 + 4;
 
-$tooltip-arrow-width-light: 7px;
-$tooltip-distance-light: $tooltip-arrow-width-light - 1 + 4;
-$tooltip-arrow-outer-width-light: ($tooltip-arrow-width-light + 1);
-$tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
+$--tooltip-arrow-width-light: 7px;
+$--tooltip-distance-light: $--tooltip-arrow-width-light - 1 + 4;
+$--tooltip-arrow-outer-width-light: ($--tooltip-arrow-width-light + 1);
+$--tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
 
-.#{$tooltip-prefix-cls} {
+.#{$--tooltip-prefix-cls} {
   display: inline-block;
 
   &-rel {
@@ -23,60 +23,60 @@ $tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
 
   &-popper {
     @include popper(
-      $tooltip-arrow,
-      $tooltip-arrow-width,
-      $tooltip-distance,
+      $--tooltip-arrow,
+      $--tooltip-arrow-width,
+      $--tooltip-distance,
       $--tooltip-background-color
     );
   }
 
   &-light {
     @include popper(
-      $tooltip-arrow,
-      $tooltip-arrow-width-light,
-      $tooltip-distance-light,
-      $tooltip-arrow-color
+      $--tooltip-arrow,
+      $--tooltip-arrow-width-light,
+      $--tooltip-distance-light,
+      $--tooltip-arrow-color
     );
 
-    &[x-placement^="top"] .#{$tooltip-arrow}:after {
+    &[x-placement^="top"] .#{$--tooltip-arrow}:after {
       content: " ";
       bottom: 1px;
-      margin-left: -$tooltip-arrow-width-light;
+      margin-left: -$--tooltip-arrow-width-light;
       border-bottom-width: 0;
-      border-top-width: $tooltip-arrow-width-light;
+      border-top-width: $--tooltip-arrow-width-light;
       border-top-color: $--color-white;
     }
 
-    &[x-placement^="right"] .#{$tooltip-arrow}:after {
+    &[x-placement^="right"] .#{$--tooltip-arrow}:after {
       content: " ";
       left: 1px;
-      bottom: -$tooltip-arrow-width-light;
+      bottom: -$--tooltip-arrow-width-light;
       border-left-width: 0;
-      border-right-width: $tooltip-arrow-width-light;
+      border-right-width: $--tooltip-arrow-width-light;
       border-right-color: $--color-white;
     }
 
-    &[x-placement^="bottom"] .#{$tooltip-arrow}:after {
+    &[x-placement^="bottom"] .#{$--tooltip-arrow}:after {
       content: " ";
       top: 1px;
-      margin-left: -$tooltip-arrow-width-light;
+      margin-left: -$--tooltip-arrow-width-light;
       border-top-width: 0;
-      border-bottom-width: $tooltip-arrow-width-light;
+      border-bottom-width: $--tooltip-arrow-width-light;
       border-bottom-color: $--color-white;
     }
 
-    &[x-placement^="left"] .#{$tooltip-arrow}:after {
+    &[x-placement^="left"] .#{$--tooltip-arrow}:after {
       content: " ";
       right: 1px;
       border-right-width: 0;
-      border-left-width: $tooltip-arrow-width-light;
+      border-left-width: $--tooltip-arrow-width-light;
       border-left-color: $--color-white;
-      bottom: -$tooltip-arrow-width-light;
+      bottom: -$--tooltip-arrow-width-light;
     }
   }
 
   &-inner {
-    max-width: $tooltip-max-width;
+    max-width: $--tooltip-max-width;
     min-height: 34px;
     padding: 8px 12px;
     color: $--color-white;
@@ -111,7 +111,7 @@ $tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
   }
 
   &-light {
-    .#{$tooltip-arrow} {
+    .#{$--tooltip-arrow} {
       &:after {
         display: block;
         width: 0;
@@ -120,9 +120,9 @@ $tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
         border-color: transparent;
         border-style: solid;
         content: "";
-        border-width: $tooltip-arrow-width-light;
+        border-width: $--tooltip-arrow-width-light;
       }
-      border-width: $tooltip-arrow-outer-width-light;
+      border-width: $--tooltip-arrow-outer-width-light;
     }
   }
 }
