@@ -58,7 +58,7 @@ export default {
     // 以下是 tooltip 部分选项
     transfer: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     theme: {
       validator(value) {
