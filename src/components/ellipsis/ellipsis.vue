@@ -102,7 +102,6 @@ export default {
       ];
     },
     styles() {
-      console.log(this.line);
       let styles = {};
       if (this.hiddren) styles["-webkit-line-clamp"] = this.line;
       return styles;
