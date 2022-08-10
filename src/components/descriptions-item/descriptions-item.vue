@@ -1,17 +1,17 @@
 <template>
-  <div :class="classes">
-    <span :class="prefixCls + '_label'"
+  <td :class="classes">
+    <span :class="prefixCls + '__label'"
       ><slot name="label">{{ label }}</slot></span
     >
-    <span><slot></slot></span>
-  </div>
+    <span :class="prefixCls + '__content'"><slot></slot></span>
+  </td>
 </template>
 <script>
 import config from "../../config";
-const prefixCls = config.prefix;
+const prefixCls = config.prefix + "descriptions";
 
 export default {
-  name: prefixCls + "descriptions-item",
+  name: prefixCls + "-item",
   props: {
     label: {
       type: String,
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     classes() {
-      return [prefixCls + "descriptions__cell"];
+      return [prefixCls + "__cell"];
     },
     styles() {
       let styles = {};
