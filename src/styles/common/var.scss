@@ -5,10 +5,16 @@ $--color-white: #ffffff !default;
 $--color-black: #000000 !default;
 /// Font
 $--color-text-primary: #303133 !default;
+$--color-text-regular: #606266 !default;
+$--color-text-secondary: #909399 !default;
+$--color-text-placeholder: #c0c4cc !default;
 /// Background
 $--background-color-base: #f5f7fa !default;
 /// Border
 $--border-color-base: #dcdfe6 !default;
+$--border-color-light: #e4e7ed !default;
+$--border-color-lighter: #ebeef5 !default;
+$--border-color-extra-light: #f2f6fc !default;
 
 /* Border
 -------------------------- */
@@ -55,6 +61,9 @@ $--descriptions-font-size-base: $--font-size-base;
 $--descriptions-title-font-size: $--font-size-medium;
 $--descriptions-font-weight-base: $--font-weight-base;
 $--descriptions-title-font-weight: $--font-weight-bold;
+$--descriptions-text-color-primary: $--color-text-primary;
+$--descriptions-content-text-color: $--color-text-regular;
+$--descriptions-border-color: $--border-color-lighter;
 
 /* Ellipsis Tooltip
 -------------------------- */

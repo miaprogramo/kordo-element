@@ -1,16 +1,3 @@
-<!-- <template>
-  <div :class="prefixCls">
-    <div v-if="title || extra" :class="prefixCls + '_header'">
-      <div v-if="title" :class="prefixCls + '_title'">{{ title }}</div>
-      <div v-if="extra" :class="prefixCls + '_extra'">{{ extra }}</div>
-    </div>
-    <table :class="prefixCls + '_body'">
-      <tbody>
-        <tr></tr>
-      </tbody>
-    </table>
-  </div>
-</template> -->
 <script>
 import config from "../../config";
 const prefixCls = config.prefix + "descriptions";
@@ -27,6 +14,11 @@ export default {
     column: {
       type: Number,
       default: 3,
+    },
+    // 设置的总列数
+    border: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -45,20 +37,20 @@ export default {
   },
   methods: {
     formatBodyEls(h, items) {
-      let els = [];
+      const tableClasses = [
+        prefixCls + "__table",
+        {
+          "is-border": this.border,
+        },
+      ];
       items = this.sliceArray(items);
-      console.log("items", items);
-      return h("table", { class: prefixCls + "_body" }, [
-        h("tbody", {}, [
-          items.map((tr) => {
-            return h(
-              "tr",
-              {},
-              tr.map((td) => {
-                return h("td", {}, [td]);
-              })
-            );
-          }),
+      return h("div", { class: prefixCls + "__body" }, [
+        h("table", { class: tableClasses }, [
+          h("tbody", {}, [
+            items.map((child) => {
+              return h("tr", {}, child);
+            }),
+          ]),
         ]),
       ]);
     },
@@ -74,9 +66,9 @@ export default {
   render(h) {
     let header = "";
     if (this.title || this.extra) {
-      header = h("div", { class: prefixCls + "_header" }, [
-        h("div", { class: prefixCls + "_title" }, this.title),
-        h("div", { class: prefixCls + "_extra" }, this.extra),
+      header = h("div", { class: prefixCls + "__header" }, [
+        h("div", { class: prefixCls + "__title" }, this.title),
+        h("div", { class: prefixCls + "__extra" }, this.extra),
       ]);
     }
 
@@ -88,7 +80,7 @@ export default {
     // this.formatTrTd(items);
     // const len = items.length;
 
-    return h("div", { class: prefixCls }, [header, body]);
+    return h("div", { class: this.classes }, [header, body]);
   },
 };
 </script>

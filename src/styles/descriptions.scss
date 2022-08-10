@@ -5,23 +5,44 @@ $--descriptions-prefix-cls: #{$--css-prefix}descriptions;
 .#{$--descriptions-prefix-cls} {
   font-size: $--descriptions-font-size-base;
   font-weight: $--descriptions-font-weight-base;
+  color: $--descriptions-text-color-primary;
 
-  &_header {
+  &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: $--margin-md;
   }
 
-  &_title {
+  &__title {
     font-size: $--descriptions-title-font-size;
     font-weight: $--descriptions-title-font-weight;
   }
 
-  &_body {
+  &__table {
     width: 100%;
+    border-collapse: collapse;
+
+    &.is-border {
+      border: 1px solid $--descriptions-border-color;
+
+      .#{$--descriptions-prefix-cls}__cell {
+        padding: $--padding-xs $--padding-sm;
+        border: 1px solid $--descriptions-border-color;
+      }
+    }
+  }
+
+  &__cell {
+    box-sizing: border-box;
+    padding-bottom: $--padding-sm;
   }
 
   &__label {
+    margin-right: $--margin-md;
+  }
+
+  &__content {
+    color: $--descriptions-content-text-color;
   }
 }
