@@ -22,20 +22,20 @@ export default {
 
 .markdown {
   h2 {
-    color: #1f2f3d;
     font-size: 28px;
-    font-weight: 400;
   }
   h3 {
     margin: 55px 0 20px;
-    color: #1f2f3d;
     font-size: 22px;
-    font-weight: 400;
   }
   h4 {
-    color: #1f2f3d;
     font-size: 16px;
-    font-weight: 400;
+  }
+  h2,
+  h3,
+  h4 {
+    color: #606266;
+    font-weight: 600;
   }
   code {
     padding: 1px 5px;
@@ -46,6 +46,7 @@ export default {
   ul li {
     color: #5e6d82;
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.7;
   }
   pre {
