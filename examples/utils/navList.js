@@ -20,6 +20,11 @@ export const guides = [
     name: "CustomTheme",
     title: "定制主题",
   },
+  {
+    path: "/guides/changelog",
+    name: "Changelog",
+    title: "更新日志",
+  },
 ];
 // 组件
 export const components = [
@@ -61,11 +66,6 @@ export const components = [
         name: "NoticeBar",
         title: "NoticeBar 通知栏",
       },
-      // {
-      //   path: "/components/descriptions",
-      //   name: "Descriptions",
-      //   title: "Descriptions 描述列表",
-      // },
       {
         path: "/components/count-down",
         name: "CountDown",

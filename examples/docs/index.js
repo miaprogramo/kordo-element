@@ -1,4 +1,5 @@
 /** guides */
+export { default as Changelog } from "./guides/changelog.md";
 export { default as CustomTheme } from "./guides/custom-theme.md";
 export { default as Introduce } from "./guides/introduce.md";
 export { default as Installation } from "./guides/installation.md";
@@ -7,7 +8,6 @@ export { default as Quickstart } from "./guides/quickstart.md";
 export { default as Affix } from "./components/affix.md";
 export { default as CountDown } from "./components/count-down.md";
 export { default as CountUp } from "./components/count-up.md";
-export { default as Descriptions } from "./components/descriptions.md";
 export { default as Ellipsis } from "./components/ellipsis.md";
 export { default as Grid } from "./components/grid.md";
 export { default as NoticeBar } from "./components/notice-bar.md";

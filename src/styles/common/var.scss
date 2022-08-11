@@ -44,7 +44,7 @@ $--padding-base: 4px !default;
 $--padding-xs: $--padding-base * 2 !default;
 $--padding-sm: $--padding-base * 3 !default;
 $--padding-md: $--padding-base * 4 !default;
-$--padding-lg: $--padding-base * 6 !default;
+$--padding-lg: $--padding-base * 5 !default;
 
 /* Margin
 -------------------------- */
@@ -52,18 +52,12 @@ $--margin-base: 4px !default;
 $--margin-xs: $--margin-base * 2 !default;
 $--margin-sm: $--margin-base * 3 !default;
 $--margin-md: $--margin-base * 4 !default;
-$--margin-lg: $--margin-base * 6 !default;
+$--margin-lg: $--margin-base * 5 !default;
 
-/* Descriptions 
+/* Grid 
 -------------------------- */
-/// Font
-$--descriptions-font-size-base: $--font-size-base;
-$--descriptions-title-font-size: $--font-size-medium;
-$--descriptions-font-weight-base: $--font-weight-base;
-$--descriptions-title-font-weight: $--font-weight-bold;
-$--descriptions-text-color-primary: $--color-text-primary;
-$--descriptions-content-text-color: $--color-text-regular;
-$--descriptions-border-color: $--border-color-lighter;
+/// Box-shadow
+$--grid-item-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2) !default;
 
 /* Ellipsis Tooltip
 -------------------------- */
@@ -74,5 +68,7 @@ $--index-tooltip: 2000 !default;
 
 /* Notice-bar
 -------------------------- */
+/// Color
 $--notice-bar-text-color: #ed6a0c !default;
+/// Background
 $--notice-bar-background-color: #fffbe8 !default;

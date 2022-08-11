@@ -33,7 +33,7 @@ $--grid-border: 1px solid $--border-color-base;
   &.is-hover-shadow {
     .#{$--grid-item-prefix-cls} {
       &:hover {
-        box-shadow: $--box-shadow-light;
+        box-shadow: $--grid-item-box-shadow;
       }
     }
   }
