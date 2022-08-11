@@ -61,11 +61,6 @@ export const components = [
         name: "NoticeBar",
         title: "NoticeBar 通知栏",
       },
-      // {
-      //   path: "/components/descriptions",
-      //   name: "Descriptions",
-      //   title: "Descriptions 描述列表",
-      // },
       {
         path: "/components/count-down",
         name: "CountDown",
