@@ -33,7 +33,6 @@
     "dayjs": "^1.11.3",
     "deepmerge": "^2.2.1",
     "element-resize-detector": "^1.2.0",
-    "highlight.js": "^11.5.1",
     "lodash.throttle": "^4.1.1",
     "numeral": "^2.0.6",
     "popper.js": "^1.14.6"
@@ -66,7 +65,7 @@
     "gulp-less": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
-    "highlight.js": "^11.5.1",
+    "highlight.js": "^11.6.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.6",
     "less": "^2.7.3",
