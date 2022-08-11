@@ -90,19 +90,19 @@
 
 ### 间隔符
 
-设置属性 `spacer` 后，会设置相邻组件间隔符。
+设置属性 `separator` 后，会设置相邻组件间隔符。
 
 ```html
 <template>
   <k-space vertical>
-    <k-space spacer="|">
+    <k-space separator="|">
       <el-button>Default</el-button>
       <el-button>Default</el-button>
       <el-button>Default</el-button>
     </k-space>
 
     <k-space>
-      <template #spacer>-</template>
+      <template #separator>-</template>
       <el-button>Default</el-button>
       <el-button>Default</el-button>
       <el-button>Default</el-button>
@@ -115,19 +115,19 @@
 
 ### Space Attributes
 
-| 属性     | 说明                                                                                                                                            | 类型                    | 默认值     |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ---------- |
-| size     | 间距大小，当类型为 `String` 时，可选值有：`small`、`large`、`default`；为 `Number` 时，是水平和垂直间距；为 `Array` 时，是 [水平间距, 垂直间距] | string / number / array | small      |
-| vertical | 是否垂直布局                                                                                                                                    | boolean                 | false      |
-| inline   | 是否为行内元素                                                                                                                                  | boolean                 | false      |
-| align    | 垂直排列方式，可选值有 `stretch`、 `center`、 `flex-start`、 `flex-end`、 `baseline`                                                            | string                  | stretch    |
-| justify  | 水平排列方式，可选值有 `flex-start`、 `flex-end`、 `center`、 `space-between`、 `space-evenly`、 `space-around`                                 | string                  | flex-start |
-| wrap     | 是否超出换行                                                                                                                                    | boolean                 | true       |
-| spacer   | 间隔符                                                                                                                                          | string / number         | -          |
+| 属性      | 说明                                                                                                                                            | 类型                    | 默认值     |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ---------- |
+| size      | 间距大小，当类型为 `String` 时，可选值有：`small`、`default`、`large`；为 `Number` 时，是水平和垂直间距；为 `Array` 时，是 [水平间距, 垂直间距] | string / number / array | small      |
+| vertical  | 是否垂直布局                                                                                                                                    | boolean                 | false      |
+| inline    | 是否为行内元素                                                                                                                                  | boolean                 | false      |
+| align     | 垂直排列方式，可选值有 `stretch`、 `center`、 `flex-start`、 `flex-end`、 `baseline`                                                            | string                  | stretch    |
+| justify   | 水平排列方式，可选值有 `flex-start`、 `flex-end`、 `center`、 `space-between`、 `space-evenly`、 `space-around`                                 | string                  | flex-start |
+| wrap      | 是否超出换行                                                                                                                                    | boolean                 | true       |
+| separator | 间隔符                                                                                                                                          | string / number         | -          |
 
 ### Space Slots
 
-| 名称    | 说明               |
-| ------- | ------------------ |
-| default | 需要添加间距的元素 |
-| spacer  | 自定义间隔符       |
+| 名称      | 说明               |
+| --------- | ------------------ |
+| default   | 需要添加间距的元素 |
+| separator | 自定义间隔符       |

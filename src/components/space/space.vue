@@ -5,7 +5,7 @@ const prefixCls = config.prefix + "space";
 export default {
   name: prefixCls,
   props: {
-    // 间距大小，当类型为 String 时，可选值有：small、large、default；为数字时，是水平和垂直间距；为 Array 时，是 [水平间距, 垂直间距]
+    // 间距大小，当类型为 String 时，可选值有：small、default、large；为数字时，是水平和垂直间距；为 Array 时，是 [水平间距, 垂直间距]
     size: {
       type: [String, Number, Array],
       default: "small",
@@ -36,7 +36,7 @@ export default {
       default: true,
     },
     // 间隔符
-    spacer: {
+    separator: {
       type: [String, Number],
     },
   },
@@ -76,7 +76,7 @@ export default {
 
     const items = this.$slots.default.filter((child) => child.text !== " ");
     const len = items.length;
-    const spacer = this.$slots.spacer || this.spacer;
+    const separator = this.$slots.separator || this.separator;
 
     return h(
       "div",
@@ -84,8 +84,11 @@ export default {
       items.map((child, index) => {
         const item = h("div", { class: prefixCls + "-item" }, [child]);
 
-        if (spacer && index + 1 < len) {
-          return [item, h("div", { class: prefixCls + "__spacer" }, [spacer])];
+        if (separator && index + 1 < len) {
+          return [
+            item,
+            h("div", { class: prefixCls + "__separator" }, [separator]),
+          ];
         }
 
         return item;
