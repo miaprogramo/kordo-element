@@ -29,13 +29,13 @@ new Vue({
 
 首先，安装 babel-plugin-component：
 
-```javascript
+```shell
 npm install babel-plugin-component --save-dev
 ```
 
 然后，将 .babelrc 修改为：
 
-```javascript
+```json
 {
   "plugins": [
     [
@@ -43,7 +43,7 @@ npm install babel-plugin-component --save-dev
       {
         "libraryName": "kordo-element",
         "style": true
-      },
+      }
     ]
   ]
 }
