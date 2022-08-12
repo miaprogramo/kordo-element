@@ -4,13 +4,13 @@
 
 :::demo
 
-### 用法
+### 基础用法
 
 可以给任何元素、组件使用。
 
 ```html
 <template>
-  <div v-resize="onResize">
+  <div v-resize="handleResize">
     <p>当宽度变化时，会触发事件</p>
     <p>当前宽度为：{{width}}</p>
   </div>
@@ -23,7 +23,36 @@
       };
     },
     methods: {
-      onResize(el) {
+      handleResize(el) {
+        this.width = el.offsetWidth;
+      },
+    },
+  };
+</script>
+```
+
+### Throttle 用法
+
+使用 `throttle` 修饰符可以节流 `150` 毫秒。
+
+想使用更多节流功能请使用 `$Throttle` 方法。
+
+```html
+<template>
+  <div v-resize.throttle="handleResize">
+    <p>当宽度变化时，会触发事件</p>
+    <p>当前宽度为：{{width}}</p>
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        width: 0,
+      };
+    },
+    methods: {
+      handleResize(el) {
         this.width = el.offsetWidth;
       },
     },

@@ -15,7 +15,7 @@
   <div class="header" :data-scrollTop="scrollTop">
     scrollTop
   </div>
-  <div class="overflow" v-scroll.self="onScroll">
+  <div class="overflow" v-scroll.self="handleScroll">
     <div v-height="1000"></div>
   </div>
 </template>
@@ -27,7 +27,56 @@
       };
     },
     methods: {
-      onScroll(event) {
+      handleScroll(event) {
+        this.scrollTop = event.target.scrollTop;
+      },
+    },
+  };
+</script>
+<style>
+  .header {
+    margin: 12px auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+  }
+  .header::after {
+    content: attr(data-scrollTop);
+    position: absolute;
+    margin-left: 12px;
+  }
+  .overflow {
+    height: 400px;
+    overflow-y: scroll;
+  }
+</style>
+```
+
+### Throttle 用法
+
+使用 `throttle` 修饰符可以节流 `150` 毫秒。
+
+想使用更多节流功能请使用 `$Throttle` 方法。
+
+```html
+<template>
+  <div class="header" :data-scrollTop="scrollTop">
+    scrollTop
+  </div>
+  <div class="overflow" v-scroll.self.throttle="handleScroll">
+    <div v-height="1000"></div>
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        scrollTop: 0,
+      };
+    },
+    methods: {
+      handleScroll(event) {
         this.scrollTop = event.target.scrollTop;
       },
     },
@@ -63,7 +112,7 @@
     scrollTop
   </div>
   <div class="overflow" id="scroll-target">
-    <div v-height="1000" v-scroll:#scroll-target="onScroll"></div>
+    <div v-height="1000" v-scroll:#scroll-target="handleScroll"></div>
   </div>
 </template>
 <script>
@@ -74,7 +123,7 @@
       };
     },
     methods: {
-      onScroll(event) {
+      handleScroll(event) {
         this.scrollTop = event.target.scrollTop;
       },
     },

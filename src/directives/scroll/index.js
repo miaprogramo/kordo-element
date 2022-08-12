@@ -1,4 +1,5 @@
 import { on, off } from "../../utils/dom";
+import throttle from "lodash.throttle";
 
 export default {
   inserted(el, binding) {
@@ -10,7 +11,12 @@ export default {
 
     if (!target) return;
 
-    on(target, "scroll", binding.value);
+    const handleScroll = throttle(
+      binding.value,
+      binding.modifiers.throttle ? 150 : 0
+    );
+    el.__handleScroll = handleScroll;
+    on(target, "scroll", handleScroll);
   },
   unbind(el, binding) {
     const target = binding.modifiers.self
@@ -21,6 +27,8 @@ export default {
 
     if (!target) return;
 
-    off(target, "scroll", binding.value);
+    off(target, "scroll", el.__handleScroll);
+    el.__handleScroll.cancel();
+    delete el.__handleScroll;
   },
 };

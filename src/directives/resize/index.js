@@ -1,18 +1,20 @@
 import elementResizeDetectorMaker from "element-resize-detector";
+import throttle from "lodash.throttle";
 
 export default {
-  // 使用 bind，会在初始化时调用两次handler
-  bind(el, binding) {
-    function resizeHandler(e) {
-      binding.value(e);
-    }
-    el.__resizeHandler = resizeHandler;
+  inserted(el, binding) {
+    const handleResize = throttle(
+      binding.value,
+      binding.modifiers.throttle ? 150 : 0
+    );
+    el.__handleResize = handleResize;
     el.__observer = elementResizeDetectorMaker();
-    el.__observer.listenTo(el, resizeHandler);
+    el.__observer.listenTo(el, handleResize);
   },
   unbind(el) {
-    el.__observer.removeListener(el, el.__resizeHandler);
-    delete el.__resizeHandler;
+    el.__observer.removeListener(el, el.__handleResize);
+    el.__handleResize.cancel();
+    delete el.__handleResize;
     delete el.__observer;
   },
 };
