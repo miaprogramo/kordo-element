@@ -26,7 +26,7 @@ export default {
     if (!target) return;
 
     off(target, "scroll", el.__handleScroll);
-    el.__handleResize.cancel && el.__handleResize.cancel();
+    el.__handleScroll.cancel && el.__handleScroll.cancel();
     delete el.__handleScroll;
   },
 };
