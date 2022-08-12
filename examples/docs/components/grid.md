@@ -61,17 +61,15 @@
 
 ```html
 <template>
-  <div>
-    显示边框：<el-switch v-model="border" />
-    <k-grid :border="border">
-      <k-grid-item>1</k-grid-item>
-      <k-grid-item>2</k-grid-item>
-      <k-grid-item>3</k-grid-item>
-      <k-grid-item>4</k-grid-item>
-      <k-grid-item>5</k-grid-item>
-      <k-grid-item>6</k-grid-item>
-    </k-grid>
-  </div>
+  显示边框：<el-switch v-model="border" />
+  <k-grid :border="border">
+    <k-grid-item>1</k-grid-item>
+    <k-grid-item>2</k-grid-item>
+    <k-grid-item>3</k-grid-item>
+    <k-grid-item>4</k-grid-item>
+    <k-grid-item>5</k-grid-item>
+    <k-grid-item>6</k-grid-item>
+  </k-grid>
 </template>
 <script>
   export default {
@@ -95,20 +93,18 @@
 
 ```html
 <<template>
-  <div>
-    显示边框：<el-switch v-model="border" /> 开启悬停：<el-switch v-model="hover" />
-    <k-grid :border="border" :hover="hover">
-      <k-grid-item>1</k-grid-item>
-      <k-grid-item>2</k-grid-item>
-      <k-grid-item>3</k-grid-item>
-      <k-grid-item>4</k-grid-item>
-      <k-grid-item>5</k-grid-item>
-      <k-grid-item>6</k-grid-item>
-      <k-grid-item>7</k-grid-item>
-      <k-grid-item>8</k-grid-item>
-      <k-grid-item>9</k-grid-item>
-    </k-grid>
-  </div>
+  显示边框：<el-switch v-model="border" /> 开启悬停：<el-switch v-model="hover" />
+  <k-grid :border="border" :hover="hover">
+    <k-grid-item>1</k-grid-item>
+    <k-grid-item>2</k-grid-item>
+    <k-grid-item>3</k-grid-item>
+    <k-grid-item>4</k-grid-item>
+    <k-grid-item>5</k-grid-item>
+    <k-grid-item>6</k-grid-item>
+    <k-grid-item>7</k-grid-item>
+    <k-grid-item>8</k-grid-item>
+    <k-grid-item>9</k-grid-item>
+  </k-grid>
 </template>
 <script>
   export default {

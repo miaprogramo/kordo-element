@@ -10,17 +10,15 @@
 
 ```html
 <template>
-  <div>
-    <p><strong>目标值：1234，持续时间：6秒</strong></p>
-    <k-count-up :target="1234" :duration="6" ref="count" v-font="24" />
-    <el-row type="flex" v-margin="'12px 0 0'">
-      <el-button @click="handlePause">暂停/继续</el-button>
-      <el-button @click="handleReset">重置</el-button>
-      <el-button @click="handleStart">开始</el-button>
-      <el-button @click="handleUpdate">更新至：</el-button>
-      <el-input-number v-model="update" :min="1"></el-input-number>
-    </el-row>
-  </div>
+  <p><strong>目标值：1234，持续时间：6秒</strong></p>
+  <k-count-up :target="1234" :duration="6" ref="count" v-font="24" />
+  <el-row type="flex" v-margin="'12px 0 0'">
+    <el-button @click="handlePause">暂停/继续</el-button>
+    <el-button @click="handleReset">重置</el-button>
+    <el-button @click="handleStart">开始</el-button>
+    <el-button @click="handleUpdate">更新至：</el-button>
+    <el-input-number v-model="update" :min="1"></el-input-number>
+  </el-row>
 </template>
 <script>
   export default {
@@ -58,12 +56,10 @@
 
 ```html
 <template>
-  <div>
-    <p><strong>目标值：1234，持续时间：6秒，小数位数：2位</strong></p>
-    <k-count-up :target="1234" :duration="6" :decimals="2" ref="count" v-font="24" />
-    <div v-margin="'12px 0 0'">
-      <el-button @click="handleRestart">重新开始</el-button>
-    </div>
+  <p><strong>目标值：1234，持续时间：6秒，小数位数：2位</strong></p>
+  <k-count-up :target="1234" :duration="6" :decimals="2" ref="count" v-font="24" />
+  <div v-margin="'12px 0 0'">
+    <el-button @click="handleRestart">重新开始</el-button>
   </div>
 </template>
 <script>
@@ -84,12 +80,10 @@
 
 ```html
 <template>
-  <div>
-    <p><strong>目标值：1234，持续时间：6秒，显示千分位</strong></p>
-    <k-count-up :target="1234" :duration="6" has-separator ref="count" v-font="24" />
-    <div v-margin="'12px 0 0'">
-      <el-button @click="handleRestart">重新开始</el-button>
-    </div>
+  <p><strong>目标值：1234，持续时间：6秒，显示千分位</strong></p>
+  <k-count-up :target="1234" :duration="6" has-separator ref="count" v-font="24" />
+  <div v-margin="'12px 0 0'">
+    <el-button @click="handleRestart">重新开始</el-button>
   </div>
 </template>
 <script>
@@ -110,12 +104,10 @@
 
 ```html
 <template>
-  <div>
-    <p><strong>目标值：1234，持续时间：6秒，显示千分位</strong></p>
-    <k-count-up :target="1234" :duration="6" prefix="￥" ref="count" v-font="24" />
-    <div v-margin="'12px 0 0'">
-      <el-button @click="handleRestart">重新开始</el-button>
-    </div>
+  <p><strong>目标值：1234，持续时间：6秒，显示千分位</strong></p>
+  <k-count-up :target="1234" :duration="6" prefix="￥" ref="count" v-font="24" />
+  <div v-margin="'12px 0 0'">
+    <el-button @click="handleRestart">重新开始</el-button>
   </div>
 </template>
 <script>
@@ -136,12 +128,10 @@
 
 ```html
 <template>
-  <div>
-    <p><strong>初始目标值：50，到达后，延迟1秒再到目标值 100</strong></p>
-    <k-count-up :target="end" :duration="6" :on-end="handleUpdate" ref="count" v-font="24" />
-    <div v-margin="'12px 0 0'">
-      <el-button @click="handleRestart">重新开始</el-button>
-    </div>
+  <p><strong>初始目标值：50，到达后，延迟1秒再到目标值 100</strong></p>
+  <k-count-up :target="end" :duration="6" :on-end="handleUpdate" ref="count" v-font="24" />
+  <div v-margin="'12px 0 0'">
+    <el-button @click="handleRestart">重新开始</el-button>
   </div>
 </template>
 <script>

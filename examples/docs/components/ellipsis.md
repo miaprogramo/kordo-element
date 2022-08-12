@@ -12,9 +12,7 @@
 
 ```html
 <template>
-  <div>
-    <k-ellipsis :text="text" :line="2" />
-  </div>
+  <k-ellipsis :text="text" :line="2" />
 </template>
 <script>
   export default {
@@ -34,13 +32,11 @@
 
 ```html
 <template>
-  <div>
-    <k-ellipsis :text="text" :line="2" />
+  <k-ellipsis :text="text" :line="2" />
 
-    <p><strong>light主题</strong></p>
+  <p><strong>light主题</strong></p>
 
-    <k-ellipsis :text="text" :line="2" theme="light" />
-  </div>
+  <k-ellipsis :text="text" :line="2" theme="light" />
 </template>
 <script>
   export default {
@@ -60,9 +56,7 @@
 
 ```html
 <template>
-  <div>
-    <k-ellipsis :text="text" :line="2" expand />
-  <div>
+  <k-ellipsis :text="text" :line="2" expand />
 </template>
 <script>
   export default {

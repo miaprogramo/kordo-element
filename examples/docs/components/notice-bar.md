@@ -10,17 +10,15 @@
 
 ```html
 <template>
-  <div>
-    <k-notice-bar>在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。</k-notice-bar>
+  <k-notice-bar>在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。</k-notice-bar>
 
-    <p><strong>开启滚动播放</strong></p>
+  <p><strong>开启滚动播放</strong></p>
 
-    <k-notice-bar scrollable>在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。</k-notice-bar>
+  <k-notice-bar scrollable>在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。</k-notice-bar>
 
-    <p><strong>内容长度溢出时默认开启</strong></p>
+  <p><strong>内容长度溢出时默认开启</strong></p>
 
-    <k-notice-bar :width="200">在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。</k-notice-bar>
-  </div>
+  <k-notice-bar :width="200">在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。</k-notice-bar>
 </template>
 ```
 

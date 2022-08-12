@@ -10,21 +10,26 @@
 
 ```html
 <template>
-  <div v-resize="handleResize">
+  <k-space align="center">
+    <span>设置宽度：</span>
+    <el-slider v-model="width" v-width="300" :min="200" :max="600" />
+  </k-space>
+  <div v-width="width" v-resize="handleResize">
     <p>当宽度变化时，会触发事件</p>
-    <p>当前宽度为：{{width}}</p>
+    <p>当前宽度为：{{offsetWidth}}</p>
   </div>
 </template>
 <script>
   export default {
     data() {
       return {
-        width: 0,
+        width: 200,
+        offsetWidth: 0,
       };
     },
     methods: {
       handleResize(el) {
-        this.width = el.offsetWidth;
+        this.offsetWidth = el.offsetWidth;
       },
     },
   };
@@ -39,21 +44,26 @@
 
 ```html
 <template>
-  <div v-resize.throttle="handleResize">
+  <k-space align="center">
+    <span>设置宽度：</span>
+    <el-slider v-model="width" v-width="300" :min="200" :max="600" />
+  </k-space>
+  <div v-width="width" v-resize.throttle="handleResize">
     <p>当宽度变化时，会触发事件</p>
-    <p>当前宽度为：{{width}}</p>
+    <p>当前宽度为：{{offsetWidth}}</p>
   </div>
 </template>
 <script>
   export default {
     data() {
       return {
-        width: 0,
+        width: 200,
+        offsetWidth: 0,
       };
     },
     methods: {
       handleResize(el) {
-        this.width = el.offsetWidth;
+        this.offsetWidth = el.offsetWidth;
       },
     },
   };
@@ -64,25 +74,30 @@
 
 使用 `debounce` 修饰符可以延迟 `150` 毫秒。
 
-想使用更多防抖动功能请使用 `$Debounce` 方法。
+想使用更多防抖功能请使用 `$Debounce` 方法。
 
 ```html
 <template>
-  <div v-resize.debounce="handleResize">
+  <k-space align="center">
+    <span>设置宽度：</span>
+    <el-slider v-model="width" v-width="300" :min="200" :max="600" />
+  </k-space>
+  <div v-width="width" v-resize.debounce="handleResize">
     <p>当宽度变化时，会触发事件</p>
-    <p>当前宽度为：{{width}}</p>
+    <p>当前宽度为：{{offsetWidth}}</p>
   </div>
 </template>
 <script>
   export default {
     data() {
       return {
-        width: 0,
+        width: 200,
+        offsetWidth: 0,
       };
     },
     methods: {
       handleResize(el) {
-        this.width = el.offsetWidth;
+        this.offsetWidth = el.offsetWidth;
       },
     },
   };

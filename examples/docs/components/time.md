@@ -10,11 +10,9 @@
 
 ```html
 <template>
-  <div>
-    <k-time :time="time1" />
-    <br />
-    <k-time :time="time2" />
-  </div>
+  <k-time :time="time1" />
+  <br />
+  <k-time :time="time2" />
 </template>
 <script>
   export default {
@@ -53,13 +51,11 @@
 
 ```html
 <template>
-  <div>
-    <k-time :time="time" />
-    <br />
-    <k-time :time="time" type="date" />
-    <br />
-    <k-time :time="time" type="datetime" />
-  </div>
+  <k-time :time="time" />
+  <br />
+  <k-time :time="time" type="date" />
+  <br />
+  <k-time :time="time" type="datetime" />
 </template>
 <script>
   export default {

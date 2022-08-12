@@ -4,16 +4,14 @@
 
 :::demo
 
-### 用法
+### 基础用法
 
 \$Date 使用了 [dayjs](https://dayjs.gitee.io/zh-CN/)，可以对时间或日期快速操作，支持链式操作。
 
 ```html
 <template>
-  <div>
-    <div>今天：{{today}}</div>
-    <div>明天：{{tomorrow}}</div>
-  </div>
+  <div>今天：{{today}}</div>
+  <div>明天：{{tomorrow}}</div>
 </template>
 <script>
   export default {

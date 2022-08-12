@@ -10,10 +10,8 @@
 
 ```html
 <template>
-  <div>
-    <div>初始内容：{{value}}</div>
-    <div>格式化后：<k-numeral :value="value"/></div>
-  </div>
+  <div>初始内容：{{value}}</div>
+  <div>格式化后：<k-numeral :value="value"/></div>
 </template>
 <script>
   export default {
@@ -32,10 +30,8 @@
 
 ```html
 <template>
-  <div>
-    <div>初始内容：{{value}}</div>
-    <div>格式化后：<k-numeral :value="value" format="0,0.00"/></div>
-  </div>
+  <div>初始内容：{{value}}</div>
+  <div>格式化后：<k-numeral :value="value" format="0,0.00"/></div>
 </template>
 <script>
   export default {

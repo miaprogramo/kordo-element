@@ -10,10 +10,8 @@
 
 ```html
 <template>
-  <div>
-    <el-input v-model="value" placeholder="随意输入内容，点击复制按钮" />
-    <el-button @click="handleCopy" v-margin="'12px 0 0'">复制</el-button>
-  </div>
+  <el-input v-model="value" placeholder="随意输入内容，点击复制按钮" />
+  <el-button @click="handleCopy" v-margin="'12px 0 0'">复制</el-button>
 </template>
 <script>
   export default {
@@ -33,16 +31,14 @@
 </script>
 ```
 
-### 回调
+### 回调用法
 
 `success` 回调可以在复制成功时触发。
 
 ```html
 <template>
-  <div>
-    <el-input v-model="value" placeholder="随意输入内容，点击复制按钮" />
-    <el-button @click="handleCopy" v-margin="'12px 0 0'">复制</el-button>
-  </div>
+  <el-input v-model="value" placeholder="随意输入内容，点击复制按钮" />
+  <el-button @click="handleCopy" v-margin="'12px 0 0'">复制</el-button>
 </template>
 <script>
   export default {

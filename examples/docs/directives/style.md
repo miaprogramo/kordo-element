@@ -19,10 +19,8 @@
 
 ```html
 <template>
-  <div>
-    <span v-display="'block'">这是一个 span 标签</span>
-    <span v-display="'block'">这是一个 span 标签</span>
-  </div>
+  <span v-display="'block'">这是一个 span 标签</span>
+  <span v-display="'block'">这是一个 span 标签</span>
 </template>
 ```
 
@@ -32,9 +30,7 @@
 
 ```html
 <template>
-  <div>
-    <el-button type="primary" v-width="200">按钮</el-button>
-  </div>
+  <el-button type="primary" v-width="200">按钮</el-button>
 </template>
 ```
 
@@ -44,10 +40,8 @@
 
 ```html
 <template>
-  <div>
-    <div v-height="100">这是一个 div</div>
-    <div v-height="100">这是一个 div</div>
-  </div>
+  <div v-height="100">这是一个 div</div>
+  <div v-height="100">这是一个 div</div>
 </template>
 ```
 
@@ -57,10 +51,8 @@
 
 ```html
 <template>
-  <div>
-    <div>这是一个 普通div</div>
-    <div v-margin="100">这是一个 margin 100px 的 div</div>
-  </div>
+  <div>这是一个 普通div</div>
+  <div v-margin="100">这是一个 margin 100px 的 div</div>
 </template>
 ```
 
@@ -70,10 +62,8 @@
 
 ```html
 <template>
-  <div>
-    <div>这是一个 普通div</div>
-    <div v-padding="100">这是一个 padding 100px 的 div</div>
-  </div>
+  <div>这是一个 普通div</div>
+  <div v-padding="100">这是一个 padding 100px 的 div</div>
 </template>
 ```
 
@@ -83,10 +73,8 @@
 
 ```html
 <template>
-  <div>
-    <span v-font="24">这是一个 span</span>
-    图标也可以：<k-icon name="github" :size="24" />
-  </div>
+  <span v-font="24">这是一个 span</span>
+  图标也可以：<k-icon name="github" :size="24" />
 </template>
 ```
 
@@ -96,9 +84,7 @@
 
 ```html
 <template>
-  <div>
-    <span v-color="'red'">这是一个 span</span>
-  </div>
+  <span v-color="'red'">这是一个 span</span>
 </template>
 ```
 
@@ -108,8 +94,6 @@
 
 ```html
 <template>
-  <div>
-    <span v-bg-color="'yellow'">这是一个 span</span>
-  </div>
+  <span v-bg-color="'yellow'">这是一个 span</span>
 </template>
 ```
