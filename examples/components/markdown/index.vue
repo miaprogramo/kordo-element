@@ -47,7 +47,7 @@ export default {
     color: #5e6d82;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.8;
   }
   pre {
     code {
