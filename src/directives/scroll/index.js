@@ -11,10 +11,8 @@ export default {
 
     if (!target) return;
 
-    const handleScroll = throttle(
-      binding.value,
-      binding.modifiers.throttle ? 150 : 0
-    );
+    let handleScroll = binding.value;
+    if (binding.modifiers.throttle) handleScroll = throttle(binding.value, 150);
     el.__handleScroll = handleScroll;
     on(target, "scroll", handleScroll);
   },
@@ -28,7 +26,7 @@ export default {
     if (!target) return;
 
     off(target, "scroll", el.__handleScroll);
-    el.__handleScroll.cancel();
+    el.__handleResize.cancel && el.__handleResize.cancel();
     delete el.__handleScroll;
   },
 };

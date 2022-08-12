@@ -60,6 +60,35 @@
 </script>
 ```
 
+### Debounce 用法
+
+使用 `debounce` 修饰符可以延迟 `150` 毫秒。
+
+想使用更多防抖动功能请使用 `$Debounce` 方法。
+
+```html
+<template>
+  <div v-resize.debounce="handleResize">
+    <p>当宽度变化时，会触发事件</p>
+    <p>当前宽度为：{{width}}</p>
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        width: 0,
+      };
+    },
+    methods: {
+      handleResize(el) {
+        this.width = el.offsetWidth;
+      },
+    },
+  };
+</script>
+```
+
 :::demo
 
 ### v-resize Params
