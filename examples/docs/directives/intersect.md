@@ -17,7 +17,7 @@
         v-margin="'800px auto 0'"
         v-width="300"
         v-intersect="{
-            callback: onIntersect,
+            callback: handleIntersect,
             options:{
               threshold: [0, 0.5, 1.0]
             }
@@ -41,7 +41,7 @@
       };
     },
     methods: {
-      onIntersect(entries) {
+      handleIntersect(entries) {
         this.isIntersecting = entries[0].isIntersecting;
       },
     },

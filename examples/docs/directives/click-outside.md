@@ -11,7 +11,7 @@
 ```html
 <template>
   <center>
-    <el-button :type="type" @click="onClick" v-click-outside="onClickOutside">Button</el-button>
+    <el-button :type="type" @click="onClick" v-click-outside="handleClickOutside">Button</el-button>
   </center>
 </template>
 <script>
@@ -25,7 +25,7 @@
       onClick() {
         this.type = "success";
       },
-      onClickOutside() {
+      handleClickOutside() {
         this.type = "default";
       },
     },
