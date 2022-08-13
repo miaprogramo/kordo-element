@@ -10,10 +10,15 @@
 
 ```html
 <template>
+  <k-space align="center">
+    需要节流的毫秒：
+    <el-input-number v-model="wait"></el-input-number>
+    <el-button type="primary" @click="handleFlush">立即调用</el-button>
+  </k-space>
   <div class="header" :data-scrollTop="scrollTop">
     scrollTop
   </div>
-  <div class="overflow" v-scroll.self="$Throttle(handleScroll,150, { leading: false })">
+  <div class="overflow" ref="overflow" v-scroll.self="$Throttle(handleScroll, wait)">
     <div v-height="1000"></div>
   </div>
 </template>
@@ -22,11 +27,16 @@
     data() {
       return {
         scrollTop: 0,
+        wait: 150,
+        throttle: null,
       };
     },
     methods: {
       handleScroll(event) {
         this.scrollTop = event.target.scrollTop;
+      },
+      handleFlush() {
+        this.throttle && this.throttle.flush();
       },
     },
   };

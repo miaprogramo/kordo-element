@@ -10,9 +10,15 @@
 
 ```html
 <template>
-  <el-input v-model="value" placeholder="随意输入内容" @input="handleInput" />
-  <p v-font="16">防抖后的值：{{target}}</p>
-  <el-button type="primary" @click="flushDebounce">立即调用</el-button>
+  <k-space vertical>
+    <k-space align="center">
+      需要延迟的毫秒：
+      <el-input-number v-model="wait"></el-input-number>
+      <el-button type="primary" @click="handleFlush">立即调用</el-button>
+    </k-space>
+    <el-input v-model="value" placeholder="随意输入内容" @input="handleInput" />
+    <p v-font="16">防抖后的值：{{target}}</p>
+  </k-space>
 </template>
 <script>
   export default {
@@ -20,18 +26,19 @@
       return {
         value: "",
         target: "",
+        wait: 300,
         debounce: null,
       };
     },
     methods: {
       handleInput(el) {
-        this.debounce = this.$Debounce(this.updateTarget, 3000);
+        this.debounce = this.$Debounce(this.updateTarget, this.wait);
         this.debounce();
       },
       updateTarget() {
         this.target = this.value;
       },
-      flushDebounce() {
+      handleFlush() {
         this.debounce && this.debounce.flush();
       },
     },
