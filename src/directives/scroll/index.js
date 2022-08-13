@@ -1,5 +1,5 @@
 import { on, off } from "../../utils/dom";
-import throttle from "lodash.throttle";
+import throttle from "../../utils/throttle";
 
 export default {
   inserted(el, binding) {

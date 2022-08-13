@@ -10,26 +10,29 @@
 
 ```html
 <template>
-  <k-space align="center">
-    <span>设置宽度：</span>
-    <el-slider v-model="width" v-width="300" :min="200" :max="600" />
-  </k-space>
-  <div v-width="width" v-resize="$Debounce(handleResize,150, { leading: false })">
-    <p>当宽度变化时，会触发事件</p>
-    <p>当前宽度为：{{offsetWidth}}</p>
-  </div>
+  <el-input v-model="value" placeholder="随意输入内容" @input="handleInput" />
+  <p v-font="16">防抖后的值：{{target}}</p>
+  <el-button type="primary" @click="flushDebounce">立即调用</el-button>
 </template>
 <script>
   export default {
     data() {
       return {
-        width: 200,
-        offsetWidth: 0,
+        value: "",
+        target: "",
+        debounce: null,
       };
     },
     methods: {
-      handleResize(el) {
-        this.offsetWidth = el.offsetWidth;
+      handleInput(el) {
+        this.debounce = this.$Debounce(this.updateTarget, 3000);
+        this.debounce();
+      },
+      updateTarget() {
+        this.target = this.value;
+      },
+      flushDebounce() {
+        this.debounce && this.debounce.flush();
       },
     },
   };

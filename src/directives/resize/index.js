@@ -1,6 +1,6 @@
 import elementResizeDetectorMaker from "element-resize-detector";
-import throttle from "lodash.throttle";
-import debounce from "lodash.debounce";
+import throttle from "../../utils/throttle";
+import debounce from "../../utils/debounce";
 
 export default {
   inserted(el, binding) {
