@@ -3,14 +3,13 @@
 </template>
 <script>
 import { oneOf } from "../../utils/assist";
-import Locale from "../../mixins/locale";
 import Time from "./time";
 import { isClient } from "../../utils/index";
 import config from "../../config";
 const prefixCls = config.prefix + "time";
+
 export default {
   name: prefixCls,
-  mixins: [Locale],
   props: {
     // 需要对比的时间，可以是时间戳或 Date 类型
     time: {
@@ -75,7 +74,7 @@ export default {
       }
 
       if (this.type === "relative") {
-        this.date = Time(time, this.t);
+        this.date = Time(time);
       } else {
         const date = new Date(this.time);
         const year = date.getFullYear();
@@ -106,7 +105,7 @@ export default {
     }, 1000 * this.interval);
   },
   beforeDestroy() {
-    if (this.timer) clearInterval(this.timer);
+    this.timer && clearInterval(this.timer);
   },
 };
 </script>
