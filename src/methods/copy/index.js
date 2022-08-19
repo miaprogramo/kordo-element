@@ -1,5 +1,6 @@
 import Message from "element-ui/lib/message";
 import "element-ui/lib/theme-chalk/message.css";
+import { isClient } from "../../utils";
 
 const defaultSuccessTip = "复制成功";
 const defaultErrorTip = "复制失败";
@@ -12,6 +13,8 @@ export default function({
   error,
   showTip = true,
 }) {
+  if (!isClient) return;
+
   const isRTL = document.documentElement.getAttribute("dir") === "rtl";
   const $textarea = document.createElement("textarea");
   $textarea.style.fontSize = "12pt";

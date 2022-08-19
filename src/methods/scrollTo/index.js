@@ -1,3 +1,5 @@
+import { isClient } from "../../utils";
+
 function requestAnimation(task) {
   if ("requestAnimationFrame" in window) {
     return window.requestAnimationFrame(task);
@@ -6,10 +8,10 @@ function requestAnimation(task) {
   setTimeout(task, 16);
 }
 
-export default function (el, settings, callback) {
-  if (!el) {
-    return;
-  }
+export default function(el, settings, callback) {
+  if (!isClient) return;
+
+  if (!el) return;
 
   if (typeof settings === "function") {
     callback = settings;
@@ -42,5 +44,6 @@ export default function (el, settings, callback) {
     el.scrollTop = d;
     requestAnimation(() => scroll(d, end, step));
   }
+
   scroll(from, to, step);
 }

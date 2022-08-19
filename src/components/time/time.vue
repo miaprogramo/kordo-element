@@ -4,7 +4,7 @@
 <script>
 import { oneOf } from "../../utils/assist";
 import Time from "./time";
-import { isClient } from "../../utils/index";
+import { isClient } from "../../utils";
 import config from "../../config";
 const prefixCls = config.prefix + "time";
 

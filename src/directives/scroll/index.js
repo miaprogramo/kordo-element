@@ -1,8 +1,10 @@
 import { on, off } from "../../utils/dom";
-import throttle from "../../utils/throttle";
+import { isClient, throttle } from "../../utils";
 
 export default {
   inserted(el, binding) {
+    if (!isClient) return;
+
     const target = binding.modifiers.self
       ? el
       : binding.arg
@@ -17,6 +19,8 @@ export default {
     on(target, "scroll", handleScroll);
   },
   unbind(el, binding) {
+    if (!isClient) return;
+
     const target = binding.modifiers.self
       ? el
       : binding.arg

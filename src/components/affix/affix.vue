@@ -8,7 +8,7 @@
 </template>
 <script>
 import { on, off } from "../../utils/dom";
-import { isClient } from "../../utils/index";
+import { isClient } from "../../utils";
 import config from "../../config";
 const prefixCls = config.prefix + "affix";
 

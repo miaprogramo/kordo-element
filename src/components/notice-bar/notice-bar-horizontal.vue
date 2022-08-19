@@ -6,6 +6,7 @@
 
 <script>
 import { on, off } from "../../utils/dom";
+import { isClient } from "../../utils";
 import config from "../../config";
 const prefixCls = config.prefix + "notice-bar";
 
@@ -35,10 +36,12 @@ export default {
     },
   },
   mounted() {
+    if (!isClient) return;
     on(window, "load", this.checkOverflow, false);
     this.checkOverflow();
   },
   beforeDestroy() {
+    if (!isClient) return;
     off(window, "load", this.checkOverflow, false);
   },
   methods: {
