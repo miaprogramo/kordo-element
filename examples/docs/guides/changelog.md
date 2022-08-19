@@ -7,6 +7,7 @@
 #### Feats
 
 - 新增 `Descriptions` 组件
+- 新增 `CloneDeep` 方法
 - 新增 `Throttle` 方法
 - 新增 `Debounce` 方法
 - `v-resize` 新增 `throttle` 修饰符
