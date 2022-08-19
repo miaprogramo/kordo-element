@@ -30,7 +30,7 @@
 
 ```html
 <template>
-  <el-button type="primary" v-width="200">按钮</el-button>
+  <el-button type="primary" v-width="200">Button</el-button>
 </template>
 ```
 

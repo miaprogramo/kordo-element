@@ -51,7 +51,7 @@
 
 通过 `size` 控制组件大小 `small`, `default`, `large`, 分别对应 `8px`, `12px`, `16px` 的间距. 默认的间距大小为 `small`，也就是 `8px`。
 
-您也可以通过自定义的 `size` 来控制大小， 参见下一个部分。
+您也可以通过自定义的 `size` 来控制大小。
 
 ```html
 <template>
