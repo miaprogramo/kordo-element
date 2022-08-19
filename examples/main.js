@@ -13,31 +13,35 @@ import "highlight.js/styles/default.css";
 import "./styles/index.less";
 
 import {
+  Input,
+  InputNumber,
+  Radio,
+  RadioGroup,
+  Switch,
+  Button,
+  Tooltip,
+  Tag,
+  Slider,
   Icon,
   Row,
   Col,
-  Button,
-  Radio,
-  RadioGroup,
-  inputNumber,
-  Switch,
-  Slider,
-  Tooltip,
   Card,
   Message,
   Notification,
 } from "element-ui";
 
-Vue.use(Icon)
-  .use(Row)
-  .use(Col)
-  .use(Button)
+Vue.use(Input)
+  .use(InputNumber)
   .use(Radio)
   .use(RadioGroup)
-  .use(inputNumber)
   .use(Switch)
-  .use(Slider)
+  .use(Button)
   .use(Tooltip)
+  .use(Tag)
+  .use(Slider)
+  .use(Icon)
+  .use(Row)
+  .use(Col)
   .use(Card);
 
 Vue.prototype.$notify = Notification;

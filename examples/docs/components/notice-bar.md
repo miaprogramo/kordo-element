@@ -105,14 +105,14 @@
 
 ### NoticeBar Slots
 
-| 名称       | 说明             |
-| ---------- | ---------------- |
-| default    | 默认插槽内容     |
-| left-icon  | 左侧图标插槽内容 |
-| right-icon | 右侧图标插槽内容 |
+| 名称       | 说明           |
+| ---------- | -------------- |
+| default    | 通知文本内容   |
+| left-icon  | 自定义左侧图标 |
+| right-icon | 自定义右侧图标 |
 
 ### NoticeBarItem Slots
 
 | 名称    | 说明         |
 | ------- | ------------ |
-| default | 默认插槽内容 |
+| default | 通知文本内容 |
