@@ -1,7 +1,6 @@
 <script>
 import { oneOf } from "../../utils/assist";
 import config from "../../config";
-import { chdir } from "process";
 const prefixCls = config.prefix + "descriptions";
 
 export default {
@@ -12,7 +11,7 @@ export default {
     title: String,
     // 操作区文本，显示在右上方
     extra: String,
-    // 设置的总列数
+    // 每行 `Descriptions Item` 的数量
     column: {
       type: Number,
       default: 3,
@@ -29,16 +28,11 @@ export default {
     size: {
       type: String,
       validator(value) {
-        return oneOf(value, ["small", "default", "large"]);
+        return oneOf(value, ["small", "default", "large", "huge"]);
       },
       default: "default",
     },
-    // 是否带有边框
-    border: {
-      type: Boolean,
-      default: false,
-    },
-    // 分隔符，border　为 false　时生效
+    // 分隔符
     separator: {
       type: String,
       default: "：",
@@ -56,6 +50,8 @@ export default {
         {
           [prefixCls + "--small"]: this.size === "small",
           [prefixCls + "--large"]: this.size === "large",
+          [prefixCls + "--huge"]: this.size === "huge",
+          ["is-vertical"]: this.direction === "vertical",
         },
       ];
       return classes;
@@ -73,21 +69,6 @@ export default {
         h("table", { class: tableClasses }, [
           h("tbody", {}, [
             items.map((child) => {
-              return h("tr", {}, child);
-            }),
-          ]),
-        ]),
-      ]);
-    },
-    formatTableEls(h, items) {
-      const tableClasses = [prefixCls + "__table", "is-border"];
-      items = this.sliceArray(items);
-      return h("div", { class: prefixCls + "__body" }, [
-        h("table", { class: tableClasses }, [
-          h("tbody", {}, [
-            items.map((child) => {
-              console.log(child[0]);
-              console.log(child[0].data);
               return h("tr", {}, child);
             }),
           ]),
@@ -119,15 +100,7 @@ export default {
     const items = this.$slots.default
       ? this.$slots.default.filter((child) => child.text !== " ")
       : [];
-    let body;
-    if (this.border) {
-      body = this.formatTableEls(h, items);
-    } else {
-      body = this.formatBodyEls(h, items);
-    }
-    // console.log(this.chunk(items, 2));
-    // this.formatTrTd(items);
-    // const len = items.length;
+    const body = this.formatBodyEls(h, items);
 
     return h("div", { class: this.classes }, [header, body]);
   },

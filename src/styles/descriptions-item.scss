@@ -1,3 +1,9 @@
 @import "common";
 
-$--descriptions-item-prefix-cls: #{$--css-prefix}descriptions-item;
+$--descriptions-item-prefix-cls: #{$--css-prefix}descriptions__cell;
+
+.#{$--descriptions-item-prefix-cls} {
+  box-sizing: border-box;
+  padding-bottom: $--padding-sm;
+  vertical-align: top;
+}

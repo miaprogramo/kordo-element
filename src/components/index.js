@@ -1,6 +1,8 @@
 export { default as Affix } from "./affix";
 export { default as CountDown } from "./count-down";
 export { default as CountUp } from "./count-up";
+export { default as Descriptions } from "./descriptions";
+export { default as DescriptionsItem } from "./descriptions-item";
 export { default as Ellipsis } from "./ellipsis";
 export { default as Grid } from "./grid";
 export { default as GridItem } from "./grid-item";

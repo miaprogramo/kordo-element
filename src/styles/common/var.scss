@@ -45,6 +45,7 @@ $--padding-xs: $--padding-base * 2 !default;
 $--padding-sm: $--padding-base * 3 !default;
 $--padding-md: $--padding-base * 4 !default;
 $--padding-lg: $--padding-base * 5 !default;
+$--padding-hg: $--padding-base * 6 !default;
 
 /* Margin
 -------------------------- */
@@ -53,6 +54,7 @@ $--margin-xs: $--margin-base * 2 !default;
 $--margin-sm: $--margin-base * 3 !default;
 $--margin-md: $--margin-base * 4 !default;
 $--margin-lg: $--margin-base * 5 !default;
+$--margin-hg: $--margin-base * 6 !default;
 
 /* Grid 
 -------------------------- */
@@ -72,3 +74,9 @@ $--index-tooltip: 2000 !default;
 $--notice-bar-text-color: #ed6a0c !default;
 /// Background
 $--notice-bar-background-color: #fffbe8 !default;
+
+/* Descriptions 
+-------------------------- */
+/// Font
+$--descriptions-text-color-primary: $--color-text-primary;
+$--descriptions-content-text-color: $--color-text-regular;
