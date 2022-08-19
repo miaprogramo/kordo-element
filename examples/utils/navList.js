@@ -46,6 +46,11 @@ export const components = [
         name: "Space",
         title: "Space 间距",
       },
+      {
+        path: "/components/descriptions",
+        name: "Descriptions",
+        title: "Descriptions 描述列表",
+      },
     ],
   },
   {
@@ -106,6 +111,21 @@ export const methods = [
     name: "ScrollTo",
     title: "$ScrollTo 滚动",
   },
+  {
+    path: "/methods/deepClone",
+    name: "DeepClone",
+    title: "$DeepClone 深拷贝",
+  },
+  {
+    path: "/methods/throttle",
+    name: "Throttle",
+    title: "$Throttle 节流",
+  },
+  {
+    path: "/methods/debounce",
+    name: "Debounce",
+    title: "$Debounce 防抖",
+  },
 ];
 // 指令
 export const directives = [
@@ -130,13 +150,13 @@ export const directives = [
     title: "v-resize 监听尺寸变化",
   },
   {
-    path: "/directives/intersect",
-    name: "Intersect",
-    title: "v-intersect 监听元素曝光",
-  },
-  {
     path: "/directives/scroll",
     name: "Scroll",
     title: "v-scroll 监听元素滚动",
+  },
+  {
+    path: "/directives/intersect",
+    name: "Intersect",
+    title: "v-intersect 监听元素曝光",
   },
 ];
