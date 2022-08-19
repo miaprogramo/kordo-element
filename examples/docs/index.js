@@ -16,6 +16,7 @@ export { default as Numeral } from "./components/numeral.md";
 export { default as Space } from "./components/space.md";
 export { default as Time } from "./components/time.md";
 /** methods */
+export { default as DeepClone } from "./methods/deepClone.md";
 export { default as Copy } from "./methods/copy.md";
 export { default as Date } from "./methods/date.md";
 export { default as Debounce } from "./methods/debounce.md";

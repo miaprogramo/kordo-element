@@ -11,21 +11,12 @@ const routes = [
     component: () => import("@/views/index"),
   },
   ...moduleRouter,
-  // {
-  //   path: "/404",
-  //   name: "404",
-  //   component: () => import("@/views/404"),
-  // },
-  // {
-  //   path: "/",
-  //   redirect: "/index",
-  // },
-  // {
-  //   path: "*",
-  //   redirect: {
-  //     name: "index",
-  //   },
-  // },
+  {
+    path: "*",
+    redirect: {
+      name: "Introduce",
+    },
+  },
 ];
 
 const router = new VueRouter({

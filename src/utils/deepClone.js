@@ -1461,7 +1461,7 @@ function toSource(func) {
  * console.log(deep[0] === objects[0]);
  * // => false
  */
-function cloneDeep(value) {
+function deepClone(value) {
   return baseClone(value, true, true);
 }
 
@@ -1819,4 +1819,4 @@ function stubFalse() {
   return false;
 }
 
-export default cloneDeep;
+export default deepClone;
