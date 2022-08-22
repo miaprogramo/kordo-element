@@ -13,3 +13,9 @@
 - `v-resize` 新增 `throttle` 修饰符
 - `v-resize` 新增 `debounce` 修饰符
 - `v-scroll` 新增 `throttle` 修饰符
+
+### 2.1.1
+
+#### Fixes
+
+- 修复 `DeepClone` 调用报错
