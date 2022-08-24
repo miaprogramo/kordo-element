@@ -4,4 +4,5 @@ $--affix-prefix-cls: #{$--css-prefix}affix;
 
 .#{$--affix-prefix-cls} {
   position: fixed;
+  z-index: $--Affix-index;
 }

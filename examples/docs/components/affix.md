@@ -16,7 +16,7 @@
 </template>
 ```
 
-### 基础用法
+### 偏移
 
 当滚动到一定距离时再固定。
 
@@ -42,6 +42,29 @@
 </template>
 ```
 
+### 固定状态改变时的回调
+
+在屏幕下方固定，可以通过缩小浏览器窗口高度来查看效果。
+
+注意，`offset-top`和`offset-bottom`只可以设置一个，如果都设置，会使用`offset-top`。
+
+```html
+<template>
+  <k-affix :offset-top="100" @on-change="change">
+    <el-button type="primary">offset-bottom = 100</el-button>
+  </k-affix>
+</template>
+<script>
+  export default {
+    methods: {
+      change(status) {
+        this.$message.info(`Status: ${status}`);
+      },
+    },
+  };
+</script>
+```
+
 :::demo
 
 ### Affix Attributes
@@ -51,13 +74,13 @@
 | offset-top    | 距离窗口顶部达到指定偏移量后触发        | number  | 0      |
 | offset-bottom | 距离窗口底部达到指定偏移量后触发        | number  | -      |
 | use-capture   | addEventListener 原生的 useCapture 选项 | boolean | false  |
-| z-index       | css 属性 z-index                        | number  | 100    |
+| z-index       | css 属性 z-index                        | number  | -      |
 
 ### Affix Events
 
 | 事件名 | 说明                     | 返回值 |
 | ------ | ------------------------ | ------ |
-| change | 在固定状态发生改变时触发 | fixed  |
+| change | 在固定状态发生改变时触发 | status |
 
 ### Affix Slots
 

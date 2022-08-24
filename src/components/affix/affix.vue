@@ -1,12 +1,13 @@
 <template>
   <div>
-    <div ref="point" :class="classes" :style="[{ zIndex }, styles]">
+    <div ref="point" :class="classes" :style="styles">
       <slot></slot>
     </div>
     <div v-show="slot" :style="slotStyle"></div>
   </div>
 </template>
 <script>
+import { nextTick } from "vue";
 import { on, off } from "../../utils/dom";
 import { isClient } from "../../utils";
 import config from "../../config";
@@ -46,28 +47,24 @@ export default {
   name: prefixCls,
   emits: ["change"],
   props: {
-    // 距离窗口顶部达到指定偏移量后触发
     offsetTop: {
       type: Number,
       default: 0,
     },
-    // 距离窗口底部达到指定偏移量后触发
     offsetBottom: {
       type: Number,
     },
-    // addEventListener 原生的 useCapture 选项
     useCapture: {
       type: Boolean,
       default: false,
     },
-    // css属性z-index
     zIndex: {
       type: Number,
-      default: 100,
     },
   },
   data() {
     return {
+      prefixCls,
       affix: false,
       styles: {},
       slot: false,
@@ -86,7 +83,7 @@ export default {
     classes() {
       return [
         {
-          [`${prefixCls}`]: true,
+          [`${prefixCls}`]: this.affix,
         },
       ];
     },
@@ -94,9 +91,11 @@ export default {
   mounted() {
     on(window, "scroll", this.handleScroll, this.useCapture);
     on(window, "resize", this.handleScroll, this.useCapture);
-    this.handleScroll();
+    nextTick(() => {
+      this.handleScroll();
+    });
   },
-  beforeDestroy() {
+  beforeUnmount() {
     off(window, "scroll", this.handleScroll, this.useCapture);
     off(window, "resize", this.handleScroll, this.useCapture);
   },
@@ -122,6 +121,7 @@ export default {
         };
         this.slot = true;
         this.styles = {
+          zIndex: this.zIndex,
           top: `${this.offsetTop}px`,
           left: `${elOffset.left}px`,
           width: `${this.$el.offsetWidth}px`,
@@ -150,6 +150,7 @@ export default {
       ) {
         this.affix = true;
         this.styles = {
+          zIndex: this.zIndex,
           bottom: `${this.offsetBottom}px`,
           left: `${elOffset.left}px`,
           width: `${this.$el.offsetWidth}px`,
