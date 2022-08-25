@@ -95,7 +95,7 @@ export default {
       this.handleScroll();
     });
   },
-  beforeUnmount() {
+  beforeDestroy() {
     off(window, "scroll", this.handleScroll, this.useCapture);
     off(window, "resize", this.handleScroll, this.useCapture);
   },
