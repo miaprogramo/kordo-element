@@ -7,7 +7,6 @@
   </div>
 </template>
 <script>
-import { nextTick } from "vue";
 import { on, off } from "../../utils/dom";
 import { isClient } from "../../utils";
 import config from "../../config";
@@ -91,9 +90,7 @@ export default {
   mounted() {
     on(window, "scroll", this.handleScroll, this.useCapture);
     on(window, "resize", this.handleScroll, this.useCapture);
-    nextTick(() => {
-      this.handleScroll();
-    });
+    this.handleScroll();
   },
   beforeDestroy() {
     off(window, "scroll", this.handleScroll, this.useCapture);
