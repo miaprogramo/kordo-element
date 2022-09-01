@@ -7,20 +7,18 @@
 #### Feats
 
 - 新增 `Descriptions` 组件
-- 新增 `DeepClone` 方法
 - 新增 `Throttle` 方法
 - 新增 `Debounce` 方法
 - `v-resize` 新增 `throttle` 修饰符
 - `v-resize` 新增 `debounce` 修饰符
 - `v-scroll` 新增 `throttle` 修饰符
 
-### 2.1.1
+### 2.2.0
 
-#### Fixes
+#### Feats
 
-- 修复 `DeepClone` 调用报错
-
-### 2.1.4
+- 新增 `DeepClone` 方法
+- `Affix` 新增 `container` 属性
 
 #### Fixes
 

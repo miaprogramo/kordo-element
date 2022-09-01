@@ -46,19 +46,27 @@ export default {
   name: prefixCls,
   emits: ["change"],
   props: {
+    // 距离窗口顶部达到指定偏移量后触发
     offsetTop: {
       type: Number,
       default: 0,
     },
+    // 距离窗口底部达到指定偏移量后触发
     offsetBottom: {
       type: Number,
     },
+    // addEventListener 原生的 useCapture 选项
     useCapture: {
       type: Boolean,
       default: false,
     },
+    // css 属性 z-index
     zIndex: {
       type: Number,
+    },
+    // 指定容器对应的 HTML 节点
+    container: {
+      type: Object,
     },
   },
   data() {
@@ -68,6 +76,8 @@ export default {
       styles: {},
       slot: false,
       slotStyle: {},
+      observer: null,
+      isIntersecting: false,
     };
   },
   computed: {
@@ -87,7 +97,25 @@ export default {
       ];
     },
   },
+  watch: {
+    container: {
+      handler(newVal, oldVal) {
+        this.$nextTick(() => {
+          if (newVal) {
+            this.observer.observe(newVal);
+          }
+          if (oldVal) {
+            this.observer.observe(oldVal);
+          }
+        });
+      },
+      immediate: true,
+    },
+  },
   mounted() {
+    if (!isClient) return;
+
+    this.observer = new IntersectionObserver(this.handleIntersection);
     on(window, "scroll", this.handleScroll, this.useCapture);
     on(window, "resize", this.handleScroll, this.useCapture);
     this.handleScroll();
@@ -97,13 +125,32 @@ export default {
     off(window, "resize", this.handleScroll, this.useCapture);
   },
   methods: {
+    handleIntersection(entries) {
+      this.isIntersecting = entries[0].isIntersecting;
+    },
     handleScroll() {
-      if (!isClient) return;
       const affix = this.affix;
       const scrollTop = getScroll(window, true);
       const elOffset = getOffset(this.$el);
       const windowHeight = window.innerHeight;
       const elHeight = this.$el.getElementsByTagName("div")[0].offsetHeight;
+
+      if (this.container && !this.isIntersecting) {
+        if (this.offsetType == "top") {
+          this.slot = false;
+          this.slotStyle = {};
+          this.affix = false;
+          this.styles = null;
+
+          this.$emit("change", false);
+        } else if (this.offsetType == "bottom") {
+          this.affix = false;
+          this.styles = null;
+
+          this.$emit("change", false);
+        }
+        return;
+      }
 
       // Fixed Top
       if (
