@@ -46,11 +46,6 @@ export const components = [
         name: "Space",
         title: "Space 间距",
       },
-      {
-        path: "/components/descriptions",
-        name: "Descriptions",
-        title: "Descriptions 描述列表",
-      },
     ],
   },
   {
